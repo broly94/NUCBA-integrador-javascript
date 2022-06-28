@@ -1,0 +1,36 @@
+/**VARIABLES */
+/**COLORES */
+$color-uno: #233142;
+$color-dos: #455d7a;
+$color-tres: #f95959;
+$color-cuatro: #e3e3e3;
+
+/**FUENTES */
+
+/**VARIABLES END*/
+
+/** CONFIGURACION GENERAL */
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+body {
+    background-color: $color-cuatro;
+}
+/** CONFIGURACION GENERAL END*/
+
+/** CONFIGURACION ESQUELETO*/
+
+/** CONFIGURACION ESQUELETO END*/
+
+.contenedor-principal{
+    .header{
+        img{
+            max-width: 100%;
+        }
+    }
+}

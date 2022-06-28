@@ -18,8 +18,25 @@ body {
 }
 
 /** CONFIGURACION GENERAL END*/
-/** CONFIGURACION ESQUELETO*/
-/** CONFIGURACION ESQUELETO END*/
+/** HEADER **/
 .contenedor-principal .header img {
   max-width: 100%;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/** HEADER END **/
+/** NAVBAR */
+.nav-principal {
+  margin-right: 0px !important;
+}
+
+/** NAVBAR */
+/** CONFIGURACION ESQUELETO MAIN*/
+.main {
+  display: grid;
+  width: 100%;
+  grid-template-areas: "search" "aside productos";
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+/** CONFIGURACION ESQUELETO MAIN END *//*# sourceMappingURL=style.css.map */

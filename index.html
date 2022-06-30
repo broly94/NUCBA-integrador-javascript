@@ -19,7 +19,7 @@
       <div class="contenedor-principal">
          <header class="header">
             <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg navbar-light">
+            <nav class="navbar navbar-expand-lg navbar-light justify-content-center">
                <!-- Container wrapper -->
                <div class="container-fluid">
                   <!-- Toggle button -->
@@ -51,11 +51,11 @@
                            <a class="nav-link text-uppercase" href="#">Más vendidos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">Iniciar Sesión</a>
-                         </li>
-                         <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">Registro</a>
-                         </li>
+                           <a class="nav-link text-uppercase" href="#">Iniciar Sesión</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link text-uppercase" href="#">Registro</a>
+                        </li>
                      </ul>
                      <!-- Left links -->
                   </div>
@@ -73,16 +73,19 @@
                <!-- Container wrapper -->
             </nav>
             <!--Navbar End-->
-            
+
             <!--Head-->
             <div class="contanedor-header container pt-5">
                <div class="row d-flex justify-content-center align-items-center">
                   <div class="col-12 col-md-6">
-                      <h1 class="display-1 h1">Bike Commerce</h1>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatum impedit obcaecati, quam nam aliquam fugit beatae similique adipisci corrupti corporis nostrum consectetur, blanditiis quis. Ut illum mollitia libero iste?</p>
-                </div>
-                <div class="col-12 col-md-6">
-                      <img src="./assets/images/header-logo-ecommerce.png" alt="logo e-commerce bike" width="auto" height="auto" />
+                     <h1 class="display-1 h1">Bike Commerce</h1>
+                     <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatum impedit obcaecati, quam nam aliquam fugit beatae
+                        similique adipisci corrupti corporis nostrum consectetur, blanditiis quis. Ut illum mollitia libero iste?
+                     </p>
+                  </div>
+                  <div class="col-12 col-md-6">
+                     <img src="./assets/images/header-logo-ecommerce.png" alt="logo e-commerce bike" width="auto" height="auto" />
                   </div>
                </div>
             </div>
@@ -90,11 +93,63 @@
          </header>
 
          <!--Main-->
-         <main class="main">
-             <aside class="aside-categorias">aside</aside>
-             <div class="busqueda"><input type="search"></div>
-            <section class="section-productos">productos</section>
-            <section class="section-mas-vendidos"></section>
+         <h2 class="text-center h2 text-uppercase py-5">Productos</h2>
+         <main class="main justify-content-center">
+            <!--Aside-->
+            <aside class="aside-categorias justify-content-center mt-5 p-3 flex-column">
+               <hp class="text-center text-uppercase pb-4">Categorias</hp>
+               <ul class="nav flex-column align-items-center justify-content-center">
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Indumentaria</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Gadgets</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Tecnologia Bike</a>
+                  </li>
+               </ul>
+            </aside>
+            <!--Aside End-->
+            <div class="contenedor-card-busqueda">
+               <div class="contenedor-busqueda container">
+                  <div class="section-busqueda">
+                     <div class="form-group d-flex flex-column flex-md-row justify-content-center p-3 container">
+                        <input class="form-control m-2" type="search" placeholder="Ej: Venzo" />
+                        <select class="form-select m-2" name="select-filtros" id="select-filtro" value>
+                           <option class="">Filtrar producto</option>
+                           <option class="" value="0">Mayor Precio</option>
+                           <option class="" value="1">Menor Precio</option>
+                        </select>
+                        <select class="form-select m-2" name="select-categorias" id="select-categorias" value>
+                           <option class="">Categorías</option>
+                           <option class="" value="0">Indumentaria</option>
+                           <option class="" value="1">Gadgets</option>
+                        </select>
+                     </div>
+                  </div>
+               </div>
+               <section class="section-productos d-flex justify-content-center">
+                  <div class="container">
+                     <div class="card justify-content-center" style="width:400px">
+                        <img class="card-img-top" src="https://www.clarin.com/img/2022/05/03/las-bicicletas-benelli-empezaran-a___ttWrA7zBz_340x340__1.jpg" alt="Card image">
+                        <div class="card-body justify-content-center">
+                          <h4 class="card-title">John Doe</h4>
+                          <p class="card-text">Some example text.</p>
+                          <a href="#" class="btn btn-primary">See Profile</a>
+                        </div>
+                      </div>
+                      <div class="card" style="width:400px">
+                        <img class="card-img-top" src="https://www.seguroscatalanaoccidente.com/blog/assets/multimedia/2016/04/bicicleta-fixie.jpg" alt="Card image">
+                        <div class="card-body">
+                          <h4 class="card-title">John Doe</h4>
+                          <p class="card-text">Some example text.</p>
+                          <a href="#" class="btn btn-primary">See Profile</a>
+                        </div>
+                      </div>
+                  </div>
+               </section>
+            </div>
          </main>
          <!--Main-->
 
@@ -102,7 +157,6 @@
             <div class="menu-redes-sociales"></div>
             <div class="menu-footer"></div>
          </footer>
-
       </div>
 
       <script type="module" src="./assets/js/index.js"></script>

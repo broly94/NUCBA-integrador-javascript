@@ -32,11 +32,32 @@ body {
 /** NAVBAR */
 /** CONFIGURACION ESQUELETO MAIN*/
 .main {
-  display: grid;
-  width: 100%;
-  grid-template-areas: "search" "aside productos";
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+}
+.main .aside-categorias {
+  display: none;
+}
+.main .contenedor-card-busqueda {
+  grid-area: contenedor-card-busqueda;
 }
 
+@media (min-width: 990px) and (min-width: 625px) {
+  .main {
+    display: grid;
+    width: 100%;
+    grid-template-areas: "aside contenedor-card-busqueda";
+    grid-template-rows: 2;
+    grid-template-columns: 1fr 4fr;
+  }
+  .main .aside-categorias {
+    display: flex;
+    grid-area: aside;
+  }
+  .main .contenedor-card-busqueda {
+    grid-area: contenedor-card-busqueda;
+  }
+  .main .contenedor-card-busqueda #select-categorias {
+    display: none;
+  }
+}
 /** CONFIGURACION ESQUELETO MAIN END *//*# sourceMappingURL=style.css.map */

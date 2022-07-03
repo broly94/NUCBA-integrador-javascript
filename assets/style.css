@@ -1,6 +1,10 @@
 /**VARIABLES */
 /**COLORES */
 /**FUENTES */
+/**Roboto Mono*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap");
+/**Dosis */
+@import url("https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300&display=swap");
 /**VARIABLES END*/
 /** CONFIGURACION GENERAL */
 html {
@@ -17,8 +21,60 @@ body {
   background-color: #e3e3e3;
 }
 
+a,
+p {
+  font-family: "Kantumruy Pro", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 2rem;
+  text-decoration: none;
+}
+
+a {
+  color: black !important;
+  margin: 10px;
+  border-radius: 5px !important;
+}
+a:hover {
+  background-color: #f95959 !important;
+  color: white !important;
+  border-radius: 5px !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 2.5rem !important;
+}
+
+input,
+select {
+  font-size: 1.2rem !important;
+  font-family: "Kantumruy Pro", sans-serif !important;
+}
+
+.text-head {
+  font-size: 5rem !important;
+  padding: 40px 0px 40px 0px !important;
+}
+
+.background-aside {
+  background-color: #f95959;
+  color: white !important;
+  border-radius: 5px;
+  opacity: 0.8;
+  border-bottom: 1px solid #f95959;
+}
+
 /** CONFIGURACION GENERAL END*/
 /** HEADER **/
+.contenedor-principal .header {
+  background-color: #233142;
+  color: white !important;
+}
 .contenedor-principal .header img {
   max-width: 100%;
 }
@@ -27,6 +83,7 @@ body {
 /** NAVBAR */
 .nav-principal {
   margin-right: 0px !important;
+  color: #e3e3e3 !important;
 }
 
 /** NAVBAR */
@@ -40,6 +97,11 @@ body {
 .main .contenedor-card-busqueda {
   grid-area: contenedor-card-busqueda;
 }
+.main .section-productos .card-productos img {
+  margin: 0 auto;
+  max-width: 100%;
+  height: 300px;
+}
 
 @media (min-width: 990px) and (min-width: 625px) {
   .main {
@@ -52,6 +114,10 @@ body {
   .main .aside-categorias {
     display: flex;
     grid-area: aside;
+    height: 500px;
+  }
+  .main .aside-categorias h2 {
+    font-size: 2.5rem;
   }
   .main .contenedor-card-busqueda {
     grid-area: contenedor-card-busqueda;
@@ -59,5 +125,38 @@ body {
   .main .contenedor-card-busqueda #select-categorias {
     display: none;
   }
+  .main .contenedor-card-busqueda .section-productos .card {
+    border: 0.3px solid rgba(0, 0, 0, 0.2);
+    margin: 5px;
+    box-shadow: 0px 3px 11px -2px rgba(0, 0, 0, 0.75);
+  }
+  .main .contenedor-card-busqueda .section-productos .card:hover {
+    box-shadow: 3px 3px 33px 1px rgba(0, 0, 0, 0.75);
+    transition: 0.5s;
+  }
 }
-/** CONFIGURACION ESQUELETO MAIN END *//*# sourceMappingURL=style.css.map */
+/** CONFIGURACION ESQUELETO MAIN END */
+/** FOOTER */
+.footer {
+  background-color: #233142;
+  color: white !important;
+}
+.footer .menu-redes-sociales a {
+  font-size: 3rem;
+  margin-top: 20px;
+  color: white !important;
+}
+.footer .menu-redes-sociales a:hover {
+  background-color: #f95959;
+  color: #233142 !important;
+  border-radius: 5px;
+}
+.footer .menu-footer a {
+  color: white !important;
+}
+.footer .menu-footer a:hover {
+  background-color: #f95959;
+  border-radius: 5px;
+}
+
+/** FOOTER END *//*# sourceMappingURL=style.css.map */

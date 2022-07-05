@@ -1,30 +1,29 @@
-import { getLocalStorage, seteLocalStorage } from './localStorage.js';
-import { cardBicicletas } from './productos.controlador.js';
+import { cardBicicletas } from './productos.draw.js';
+/** Tags Html Aside */
+const navAside = document.querySelectorAll('.nav-aside');
+const linkBicicletas = document.getElementById('bicicletas');
+const linkIndumentaria = document.getElementById('indumentaria');
+const linkGadget = document.getElementById('gadget');
+const linkTecnologia = document.getElementById('tecnologia');
+/** Tags Html productos */
+const divColumn = document.querySelector('.productos-column');
 
-const data = getLocalStorage();
-
-const imprimirProductos = () => {
-
-    const navAside = document.querySelectorAll('.nav-aside');
-    const divColumn = document.querySelector('.productos-column');
-
-    const linkBicicletas = document.getElementById('bicicletas');
-    const linkIndumentaria = document.getElementById('indumentaria');
-    const linkGadget = document.getElementById('gadget');
-    const linkTecnologia = document.getElementById('tecnologia');
+const indexProductos = (estado) => {
 
     for (const hijos of navAside) {
 
         hijos.addEventListener('click', (e) => {
+
             e.preventDefault();
 
-            const linkSeleccionado = Array.from(document.getElementById(e.target.id).classList);
-            const arrayLinks = new Array(linkBicicletas, linkIndumentaria, linkGadget, linkTecnologia);
+            const arrayClasesMenuAside = Array.from(document.getElementById(e.target.id).classList);
+            const arrayLinks = [linkBicicletas, linkIndumentaria, linkGadget, linkTecnologia]
 
+            // Si se hace click en el menu del aside =  case;
             switch (e.target.id) {
                 case 'bicicletas':
-                    cardBicicletas(divColumn, data);
-                    if (!linkSeleccionado.includes('disabled')) {
+                    cardBicicletas(divColumn, estado);
+                    if (!arrayClasesMenuAside.includes('disabled')) {
                         for (let i = 0; i < arrayLinks.length; i++) {
                             if (!arrayLinks.includes('disabled')) {
                                 arrayLinks[i].classList.remove('disabled');
@@ -36,7 +35,7 @@ const imprimirProductos = () => {
                     }
                     break;
                 case 'indumentaria':
-                    if (!linkSeleccionado.includes('disabled')) {
+                    if (!arrayClasesMenuAside.includes('disabled')) {
                         for (let i = 0; i < arrayLinks.length; i++) {
                             if (!arrayLinks.includes('disabled')) {
                                 arrayLinks[i].classList.remove('disabled');
@@ -48,7 +47,7 @@ const imprimirProductos = () => {
                     }
                     break;
                 case 'gadget':
-                    if (!linkSeleccionado.includes('disabled')) {
+                    if (!arrayClasesMenuAside.includes('disabled')) {
                         for (let i = 0; i < arrayLinks.length; i++) {
                             if (!arrayLinks.includes('disabled')) {
                                 arrayLinks[i].classList.remove('disabled');
@@ -60,7 +59,7 @@ const imprimirProductos = () => {
                     }
                     break;
                 case 'tecnologia':
-                    if (!linkSeleccionado.includes('disabled')) {
+                    if (!arrayClasesMenuAside.includes('disabled')) {
                         for (let i = 0; i < arrayLinks.length; i++) {
                             if (!arrayLinks.includes('disabled')) {
                                 arrayLinks[i].classList.remove('disabled');
@@ -76,15 +75,6 @@ const imprimirProductos = () => {
     }
 }
 
-
-
-const App = () => {
-
-    seteLocalStorage();
-    imprimirProductos();
-
+export {
+    indexProductos,
 }
-
-
-App();
-

@@ -1,5 +1,5 @@
 export const cardBicicletas = (divColumn, { bicicletas }) => {
-    
+
     if (bicicletas) {
         const bicicletasClean = bicicletas.filter((data, index) => bicicletas.indexOf(data) === index);
         bicicletasClean.forEach(bici => {
@@ -21,4 +21,15 @@ export const cardBicicletas = (divColumn, { bicicletas }) => {
         `
         });
     }
+}
+
+export const cardIndumentaria = (divColumn, { indumentaria }) => {
+
+
+
+}
+
+export const cardAccesorios = (divColumn, { indumentaria }) => {
+
+
 }

@@ -20,7 +20,9 @@
 </head>
 
 <body>
+   <!--Esqueleto principal-->
    <div class="contenedor-principal">
+      <!--Header-->
       <header class="header">
          <!-- Navbar -->
          <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center fixed-top">
@@ -36,20 +38,23 @@
                <!-- Collapsible wrapper -->
                <div class="collapse navbar-collapse container" id="navbarSupportedContent">
                   <!-- Navbar brand -->
-                  <a class="navbar-brand mt-2 mt-lg-0 p-1" href="#"> BIKE-COMMERCE </a>
+                  <a class="navbar-brand mt-2 mt-lg-0 pt-3 px-2 text-center" href="#"> BIKE-COMMERCE </a>
                   <!-- Left links -->
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                      <li class="nav-item">
-                        <a class="nav-link text-uppercase" href="#">Equipo</a>
+                        <a class="nav-link text-uppercase text-center" href="#">Inicio</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link text-uppercase" href="#">Más vendidos</a>
+                        <a class="nav-link text-uppercase text-center" href="#">Marketplace</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link text-uppercase" href="#">Iniciar Sesión</a>
+                        <a class="nav-link text-uppercase text-center" href="#">Carreras</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link text-uppercase" href="#">Registro</a>
+                        <a class="nav-link text-uppercase text-center" href="#">Iniciar Sesión</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link text-uppercase text-center" href="#">Registro</a>
                      </li>
                   </ul>
                   <!-- Left links -->
@@ -88,9 +93,11 @@
          </div>
          <!--Head end-->
       </header>
+      <!--Header fin-->
 
       <!--Main-->
       <h2 class="text-center h2 text-uppercase py-5">Productos</h2>
+
       <main class="main justify-content-center">
          <!--Aside-->
          <aside class="aside-categorias justify-content-start pt-5 flex-column">
@@ -132,25 +139,15 @@
             <section class="section-productos d-flex justify-content-center">
                <div class="container">
                   <div class="row">
-                     <div class="col-12 col-md-4 productos-column">
-                        <!-- <div class="card-productos justify-content-center">
-                           <img class="card-img-top"
-                              src="https://www.clarin.com/img/2022/05/03/las-bicicletas-benelli-empezaran-a___ttWrA7zBz_340x340__1.jpg"
-                              alt="Card image">
-                           <div class="card-body justify-content-center">
-                              <h4 class="card-title">John Doe</h4>
-                              <p class="card-text">Some example text.</p>
-                              <a href="#" class="btn btn-primary">See Profile</a>
-                           </div>
-                        </div> -->
-                     </div>
+                     <div class="col-12 col-md-4 productos-column"></div>
                   </div>
                </div>
             </section>
          </div>
       </main>
-      <!--Main-->
+      <!--Main Fin-->
 
+      <!--Section compra segura-->
       <section class="info-pagos container mt-5 pt-5">
          <div class="row">
             <div class="col-12 col-md-6 text-center align-self-center">
@@ -164,7 +161,9 @@
             </div>
          </div>
       </section>
+      <!--Section compra segura fin-->
 
+      <!--Footer-->
       <footer class="footer container-fluid">
          <div class="row d-flex justify-content-center p-5">
             <div class="menu-footer justify-content-center col-12 col-md-6">
@@ -207,9 +206,11 @@
          </div>
          <p class="text-center">Todos los derechos reservados</p>
       </footer>
+      <!--Footer fin-->
    </div>
+   <!--Esqueleto principal fin-->
 
-   <script type="module" src="./assets/js/index.js"></script>
+   <script type="module" src="./src/index.js"></script>
    <!-- Bootstrap 5 CDN JS-->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

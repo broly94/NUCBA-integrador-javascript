@@ -5,7 +5,7 @@ export const cardBicicletas = (divColumn, { bicicletas }) => {
         bicicletasClean.forEach(bici => {
             const { imagen, marca, color, rodado } = bici;
             divColumn.innerHTML += `
-            <div class="card card-productos justify-content-center">
+            <div class="card card-productos d-flex justify-content-center">
                     <img class="card-img-top"
                     src="${imagen}"
                     alt="Card image">
@@ -15,7 +15,7 @@ export const cardBicicletas = (divColumn, { bicicletas }) => {
                             <li>Color: ${color}</li>
                             <li>Rodado: ${rodado}</li>
                         </ul>
-                        <a href="#" class="btn btn-primary">Añadir al carrito</a>
+                        <a href="#" class="btn btn-outline-primary">Añadir al carrito</a>
                     </div>
             </div>
         `

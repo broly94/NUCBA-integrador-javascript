@@ -97,10 +97,54 @@ select {
 .main .contenedor-card-busqueda {
   grid-area: contenedor-card-busqueda;
 }
-.main .section-productos .card-productos img {
+.main .section-productos {
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+}
+.main .section-productos .productos-column {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+  gap: 5px;
+}
+.main .section-productos .productos-column .card {
+  border: 0.3px solid rgba(0, 0, 0, 0.2);
+  margin: 5px;
+  box-shadow: 0px 3px 11px -2px rgba(0, 0, 0, 0.75);
+}
+.main .section-productos .productos-column .card:hover {
+  box-shadow: 3px 3px 33px 1px rgba(0, 0, 0, 0.75);
+  transition: 0.5s;
+}
+.main .section-productos .productos-column .card img {
   margin: 0 auto;
   max-width: 100%;
-  height: 300px;
+}
+.main .section-productos .productos-column .card .card-body h4 {
+  text-align: center;
+  background-color: #233142;
+  color: white;
+  padding: 5px;
+}
+.main .section-productos .productos-column .card .card-body ul {
+  padding: 20px;
+  list-style: none;
+  line-height: 30px;
+  font-size: 1.2rem;
+  font-family: "Kantumruy Pro", sans-serif;
+}
+.main .section-productos .productos-column .card .card-body a {
+  display: block;
+  color: black !important;
+  font-size: 1.2rem;
+  font-family: "Kantumruy Pro", sans-serif;
+}
+.main .section-productos .productos-column .card .card-body a:hover {
+  color: white !important;
+  border: none !important;
+  background-color: #455d7a !important;
 }
 
 @media (min-width: 990px) and (min-width: 625px) {

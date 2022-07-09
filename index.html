@@ -5,7 +5,7 @@
    <meta charset="UTF-8" />
    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <meta http-equiv="Content-type" content="application/json"/>
+   <meta http-equiv="Content-type" content="application/json" />
    <!--Estilos custom-->
    <link rel="stylesheet" href="./assets/style.css" />
    <!--Normalize CSS-->
@@ -38,23 +38,23 @@
                <!-- Collapsible wrapper -->
                <div class="collapse navbar-collapse container" id="navbarSupportedContent">
                   <!-- Navbar brand -->
-                  <a class="navbar-brand mt-2 mt-lg-0 pt-3 px-2 text-center" href="#"> BIKE-COMMERCE </a>
+                  <a class="navbar-brand mt-2 mt-lg-0 pt-3 px-2 text-center" href="index.html"> BIKE-COMMERCE </a>
                   <!-- Left links -->
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                      <li class="nav-item">
-                        <a class="nav-link text-uppercase text-center" href="#">Inicio</a>
+                        <a class="nav-link text-uppercase text-center" href="index.html">Inicio</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link text-uppercase text-center" href="#">Marketplace</a>
+                        <a class="nav-link text-uppercase text-center" href="marketplace.html">Marketplace</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link text-uppercase text-center" href="#">Carreras</a>
+                        <a class="nav-link text-uppercase text-center" href="carreras.html">Carreras</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link text-uppercase text-center" href="#">Iniciar Sesión</a>
+                        <a class="nav-link text-uppercase text-center" href="login.html">Iniciar Sesión</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link text-uppercase text-center" href="#">Registro</a>
+                        <a class="nav-link text-uppercase text-center" href="registro.html">Registro</a>
                      </li>
                   </ul>
                   <!-- Left links -->
@@ -74,94 +74,115 @@
          </nav>
          <!--Navbar End-->
 
-         <!--Head-->
-         <div class="contanedor-header container pt-5">
-            <div class="row d-flex justify-content-center align-items-center">
-               <div class="col-12 col-md-6 animate__animated animate__backInLeft">
-                  <h1 class="display-1 h1 text-center text-head animate__backInLeft">Bike Commerce</h1>
-                  <p class="text-center">
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatum impedit obcaecati, quam
-                     nam aliquam fugit beatae
-                     similique adipisci corrupti corporis nostrum consectetur, blanditiis quis. Ut illum mollitia libero
-                     iste?
-                  </p>
+         <!--Carousel-->
+         <div id="carouselExampleCaptions" class="carousel slide mt-5 pt-4" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                  aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+               <div class="carousel-item active" data-bs-interval="4000">
+                  <img src="/assets/images/carousel/muc_off.jpg" class="d-block w-100" alt="muc_off">
+                  <div class="carousel-caption d-none d-md-block">
+                     <h5>Muc Off Profesional</h5>
+                     <p>Todos los Muc Off en nuestro MarketPlace</p>
+                  </div>
                </div>
-               <div class="col-12 col-md-6 animate__animated animate__backInRight">
-                  <img src="./assets/images/header-logo.svg" alt="logo e-commerce bike" width="auto" height="auto" />
+               <div class="carousel-item" data-bs-interval="4000">
+                  <img src="./assets/images/carousel/carrera.png" class="d-block w-100" alt="carrera">
+                  <div class="carousel-caption d-none d-md-block">
+                     <h5>Carreras Programadas</h5>
+                     <p>Carreras en Buenos Aires. Inscripción abierta</p>
+                  </div>
+               </div>
+               <div class="carousel-item" data-bs-interval="4000">
+                  <img src="./assets/images/carousel/playera_dama.png" class="d-block w-100" alt="playera dama">
+                  <div class="carousel-caption d-none d-md-block">
+                     <h5>Productos para todos</h5>
+                     <p>Tenemos productos para cualquier tipo de ocación</p>
+                  </div>
+               </div>
+               <div class="carousel-item" data-bs-interval="4000">
+                  <img src="./assets/images/carousel/todos_productos.jpg" class="d-block w-100"
+                     alt="todos los productos">
+                  <div class="carousel-caption d-none d-md-block">
+                     <h5>Invovamos</h5>
+                     <p>Todos los productos tecnológicos en un solo lugar</p>
+                  </div>
                </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+               data-bs-slide="prev">
+               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+               <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+               data-bs-slide="next">
+               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+               <span class="visually-hidden">Next</span>
+            </button>
          </div>
-         <!--Head end-->
+         <!--Carousel end-->
       </header>
       <!--Header fin-->
 
-      <!--Main-->
-      <h2 class="text-center h2 text-uppercase py-5">Productos</h2>
-
-      <main class="main justify-content-center">
-         <!--Aside-->
-         <aside class="aside-categorias justify-content-start pt-5 flex-column">
-            <h2 class="text-center text-uppercase pb-4">Categorias</h2>
-            <ul class="nav flex-column align-items-center justify-content-center nav-aside" id="nav-aside">
-               <li class="nav-item" id="li-bicicletas">
-                  <a class="nav-link" href="#" id="bicicletas">Bicicletas</a>
-               </li>
-               <li class="nav-item" id="li-indumentaria">
-                  <a class="nav-link" href="#" id="indumentaria">Indumentaria</a>
-               </li>
-               <li class="nav-item" id="li-gadget">
-                  <a class="nav-link" href="#" id="gadget">Gadgets</a>
-               </li>
-               <li class="nav-item" id="li-tecnologia">
-                  <a class="nav-link" href="#" id="tecnologia">Tecnologia Bike</a>
-               </li>
-            </ul>
-         </aside>
-         <!--Aside End-->
-         <div class="contenedor-card-busqueda">
-            <div class="contenedor-busqueda container">
-               <div class="section-busqueda">
-                  <div class="form-group d-flex flex-column flex-md-row justify-content-center p-3 container">
-                     <input class="form-control m-2" type="search" placeholder="Ej: Venzo" />
-                     <select class="form-select m-2" name="select-filtros" id="select-filtro" value>
-                        <option class="">Filtrar producto</option>
-                        <option class="" value="0">Mayor Precio</option>
-                        <option class="" value="1">Menor Precio</option>
-                     </select>
-                     <select class="form-select m-2" name="select-categorias" id="select-categorias" value>
-                        <option class="">Categorías</option>
-                        <option class="" value="0">Indumentaria</option>
-                        <option class="" value="1">Gadgets</option>
-                     </select>
+      <div class="container mt-5">
+         <!--Section mas vendidos-->
+         <section class="mas-vendidos pt-5">
+            <h3 class="display-3 h3 text-uppercase text-center">productos mas vendidos</h3>
+            <div class="container mas-vendidos-card d-block d-md-flex justify-content-center pt-5">
+               <div class="card mx-3" style="">
+                  <img src="./assets/images/mas-vendidos/bici_1.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                     <h5 class="card-title">Card title</h5>
+                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                     <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+               </div>
+               <div class="card  mx-3" style="">
+                  <img src="./assets/images/mas-vendidos/casco_1.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                     <h5 class="card-title">Card title</h5>
+                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                     <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+               </div>
+               <div class="card  mx-3" style="">
+                  <img src="./assets/images/mas-vendidos/cuenta_vueltas.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                     <h5 class="card-title">Card title</h5>
+                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                     <a href="#" class="btn btn-primary">Go somewhere</a>
                   </div>
                </div>
             </div>
-            <section class="section-productos d-flex justify-content-center">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-12 col-md-4 productos-column"></div>
-                  </div>
-               </div>
-            </section>
-         </div>
-      </main>
-      <!--Main Fin-->
+         </section>
+         <!--Section mas vendidos-->
 
-      <!--Section compra segura-->
-      <section class="info-pagos container mt-5 pt-5">
-         <div class="row">
-            <div class="col-12 col-md-6 text-center align-self-center">
-               <h3 class="h3 display-3 text-head">Compra Segura</h3>
-               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo error veritatis voluptatum rem et
-                  veniam delectus similique iure. Officia, expedita in. Nulla, quibusdam tempora odit harum earum optio
-                  dolorem quisquam.</p>
+         <!--Section compra segura-->
+         <section class="info-pagos container mt-5 pt-5">
+            <div class="row">
+               <div class="col-12 col-md-6 text-center align-self-center">
+                  <h3 class="h5 display-5 text-head">Envio a todo el país</h3>
+                  <p>Tu compra esta protegida. Ademas tenemos envios a todo el pais mediante Mercado Pago y Mercado
+                     Envios.</p>
+               </div>
+               <div class="col-12 col-md-6">
+                  <img src="./assets/images/pagos-logo.svg" alt="Pagos">
+               </div>
             </div>
-            <div class="col-12 col-md-6">
-               <img src="./assets/images/pagos-logo.svg" alt="Pagos">
-            </div>
-         </div>
-      </section>
-      <!--Section compra segura fin-->
+         </section>
+         <!--Section compra segura fin-->
+      </div>
 
       <!--Footer-->
       <footer class="footer container-fluid">

@@ -33,12 +33,10 @@ p {
 a {
   color: black !important;
   margin: 10px;
-  border-radius: 5px !important;
 }
 a:hover {
-  background-color: #f95959 !important;
+  background-color: black !important;
   color: white !important;
-  border-radius: 5px !important;
 }
 
 h1,
@@ -62,11 +60,14 @@ select {
 }
 
 .background-aside {
-  background-color: #f95959;
+  background-color: black;
   color: white !important;
   border-radius: 5px;
-  opacity: 0.8;
-  border-bottom: 1px solid #f95959;
+  opacity: 0.9;
+}
+
+.card-text {
+  color: #f95959 !important;
 }
 
 /** CONFIGURACION GENERAL END*/
@@ -94,9 +95,6 @@ select {
 .main .aside-categorias {
   display: none;
 }
-.main .contenedor-card-busqueda {
-  grid-area: contenedor-card-busqueda;
-}
 .main .section-productos {
   padding-bottom: 50px;
   margin-bottom: 50px;
@@ -105,13 +103,12 @@ select {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
   justify-content: space-around;
-  gap: 5px;
+  width: 100%;
+  gap: 20px;
 }
 .main .section-productos .productos-column .card {
   border: 0.3px solid rgba(0, 0, 0, 0.2);
-  margin: 5px;
   box-shadow: 0px 3px 11px -2px rgba(0, 0, 0, 0.75);
 }
 .main .section-productos .productos-column .card:hover {
@@ -120,16 +117,20 @@ select {
 }
 .main .section-productos .productos-column .card img {
   margin: 0 auto;
+  width: 400px;
+  height: 350%;
   max-width: 100%;
+  max-height: 100%;
 }
 .main .section-productos .productos-column .card .card-body h4 {
   text-align: center;
   background-color: #233142;
   color: white;
   padding: 5px;
+  font-size: 1.8rem !important;
 }
 .main .section-productos .productos-column .card .card-body ul {
-  padding: 20px;
+  padding: 5px;
   list-style: none;
   line-height: 30px;
   font-size: 1.2rem;
@@ -143,8 +144,8 @@ select {
 }
 .main .section-productos .productos-column .card .card-body a:hover {
   color: white !important;
-  border: none !important;
-  background-color: #455d7a !important;
+  border: 1px solid #233142 !important;
+  background-color: #233142 !important;
 }
 
 @media (min-width: 990px) and (min-width: 625px) {
@@ -158,7 +159,18 @@ select {
   .main .aside-categorias {
     display: flex;
     grid-area: aside;
+    border: 2px solid #233142;
     height: 500px;
+  }
+  .main .aside-categorias li {
+    width: 100%;
+  }
+  .main .aside-categorias li a {
+    border-radius: 0px !important;
+    text-align: center;
+  }
+  .main .aside-categorias li a:hover {
+    background-color: black !important;
   }
   .main .aside-categorias h2 {
     font-size: 2.5rem;
@@ -171,12 +183,14 @@ select {
   }
   .main .contenedor-card-busqueda .section-productos .card {
     border: 0.3px solid rgba(0, 0, 0, 0.2);
-    margin: 5px;
     box-shadow: 0px 3px 11px -2px rgba(0, 0, 0, 0.75);
   }
   .main .contenedor-card-busqueda .section-productos .card:hover {
     box-shadow: 3px 3px 33px 1px rgba(0, 0, 0, 0.75);
     transition: 0.5s;
+  }
+  .main .contenedor-card-busqueda .section-productos .card .card-body h4 {
+    font-size: 1.2rem;
   }
 }
 /** CONFIGURACION ESQUELETO MAIN END */
@@ -193,14 +207,12 @@ select {
 .footer .menu-redes-sociales a:hover {
   background-color: #f95959;
   color: #233142 !important;
-  border-radius: 5px;
 }
 .footer .menu-footer a {
   color: white !important;
 }
 .footer .menu-footer a:hover {
   background-color: #f95959;
-  border-radius: 5px;
 }
 
 /** FOOTER END *//*# sourceMappingURL=style.css.map */

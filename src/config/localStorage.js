@@ -1,4 +1,3 @@
-
 import { DataBase } from "./dataBase.js";
 
 export const seteLocalStorage = () => {

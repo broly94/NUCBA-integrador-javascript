@@ -1,239 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Content-type" content="application/json" />
+		<!--Estilos custom-->
+		<link rel="stylesheet" href="./assets/style.css" />
+		<!--Normalize CSS-->
+		<link rel="stylesheet" href="./assets/normalize.css" />
+		<!-- Bootstrap 5 CDN CSS-->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<!--Animate CSS-->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		/>
+		<!-- FontAwesome-->
+		<script
+			src="https://kit.fontawesome.com/07dfb01708.js"
+			crossorigin="anonymous"
+		></script>
+		<title>MarketPlace Bike Store</title>
+	</head>
 
-<head>
-   <meta charset="UTF-8" />
-   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <meta http-equiv="Content-type" content="application/json" />
-   <!--Estilos custom-->
-   <link rel="stylesheet" href="./assets/style.css" />
-   <!--Normalize CSS-->
-   <link rel="stylesheet" href="./assets/normalize.css" />
-   <!-- Bootstrap 5 CDN CSS-->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-   <!--Animate CSS-->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-   <!-- FontAwesome-->
-   <script src="https://kit.fontawesome.com/07dfb01708.js" crossorigin="anonymous"></script>
-   <title>NUCBA-Integrador-Javascript</title>
-</head>
+	<body>
+		<!--Esqueleto principal-->
+		<div class="contenedor-principal">
+			<!--Header-->
+			<header class="header">
+				<!-- Navbar -->
+				<nav
+					class="navbar navbar-expand-lg navbar-light bg-light justify-content-center fixed-top"
+				>
+					<!-- Container wrapper -->
+					<div class="container-fluid">
+						<!-- Toggle button -->
+						<button
+							class="navbar-toggler"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#navbarSupportedContent"
+							aria-controls="navbarSupportedContent"
+							aria-expanded="false"
+							aria-label="Toggle navigation"
+						>
+							<i class="fas fa-bars"></i>
+						</button>
 
-<body>
-   <!--Esqueleto principal-->
-   <div class="contenedor-principal">
-      <!--Header-->
-      <header class="header">
-         <!-- Navbar -->
-         <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center fixed-top">
-            <!-- Container wrapper -->
-            <div class="container-fluid">
-               <!-- Toggle button -->
-               <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                  aria-label="Toggle navigation">
-                  <i class="fas fa-bars"></i>
-               </button>
+						<!-- Collapsible wrapper -->
+						<div
+							class="collapse navbar-collapse container"
+							id="navbarSupportedContent"
+						>
+							<!-- Navbar brand -->
+							<a
+								class="navbar-brand mt-2 mt-lg-0 pt-3 px-2 text-center"
+								href="index.html"
+							>
+								BIKE-COMMERCE
+							</a>
+							<!-- Left links -->
+							<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+								<li class="nav-item">
+									<a
+										class="nav-link text-uppercase text-center"
+										href="index.html"
+										>Inicio</a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link text-uppercase text-center"
+										href="marketplace.html"
+										>Marketplace</a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link text-uppercase text-center"
+										href="carreras.html"
+										>Carreras</a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link text-uppercase text-center"
+										href="login.html"
+										>Iniciar Sesión</a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link text-uppercase text-center"
+										href="registro.html"
+										>Registro</a
+									>
+								</li>
+							</ul>
+							<!-- Left links -->
+						</div>
+						<!-- Collapsible wrapper -->
 
-               <!-- Collapsible wrapper -->
-               <div class="collapse navbar-collapse container" id="navbarSupportedContent">
-                  <!-- Navbar brand -->
-                  <a class="navbar-brand mt-2 mt-lg-0 pt-3 px-2 text-center" href="index.html"> BIKE-COMMERCE </a>
-                  <!-- Left links -->
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                     <li class="nav-item">
-                        <a class="nav-link text-uppercase text-center" href="index.html">Inicio</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link text-uppercase text-center" href="marketplace.html">Marketplace</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link text-uppercase text-center" href="carreras.html">Carreras</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link text-uppercase text-center" href="login.html">Iniciar Sesión</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link text-uppercase text-center" href="registro.html">Registro</a>
-                     </li>
-                  </ul>
-                  <!-- Left links -->
-               </div>
-               <!-- Collapsible wrapper -->
+						<!-- Right elements -->
+						<div class="d-flex align-items-center text-dark">
+							<!-- Icon -->
+							<a class="text-reset me-3 p-2" href="#">
+								<i class="fas fa-shopping-cart"></i>
+							</a>
+						</div>
+						<!-- Right elements -->
+					</div>
+					<!-- Container wrapper -->
+				</nav>
+				<!--Navbar End-->
 
-               <!-- Right elements -->
-               <div class="d-flex align-items-center text-dark">
-                  <!-- Icon -->
-                  <a class="text-reset me-3 p-2" href="#">
-                     <i class="fas fa-shopping-cart"></i>
-                  </a>
-               </div>
-               <!-- Right elements -->
-            </div>
-            <!-- Container wrapper -->
-         </nav>
-         <!--Navbar End-->
+				<!--Carousel-->
+				<div
+					id="carouselExampleCaptions"
+					class="carousel slide mt-5 pt-4"
+					data-bs-ride="carousel"
+				>
+					<div class="carousel-indicators">
+						<button
+							type="button"
+							data-bs-target="#carouselExampleCaptions"
+							data-bs-slide-to="0"
+							class="active"
+							aria-current="true"
+							aria-label="Slide 1"
+						></button>
+						<button
+							type="button"
+							data-bs-target="#carouselExampleCaptions"
+							data-bs-slide-to="1"
+							aria-label="Slide 2"
+						></button>
+						<button
+							type="button"
+							data-bs-target="#carouselExampleCaptions"
+							data-bs-slide-to="2"
+							aria-label="Slide 3"
+						></button>
+						<button
+							type="button"
+							data-bs-target="#carouselExampleCaptions"
+							data-bs-slide-to="3"
+							aria-label="Slide 3"
+						></button>
+					</div>
+					<div class="carousel-inner">
+						<div
+							class="carousel-item active"
+							data-bs-interval="4000"
+						>
+							<img
+								src="/assets/images/carousel/muc_off.jpg"
+								class="d-block w-100"
+								alt="muc_off"
+							/>
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Muc Off Profesional</h5>
+								<p>Todos los Muc Off en nuestro MarketPlace</p>
+							</div>
+						</div>
+						<div class="carousel-item" data-bs-interval="4000">
+							<img
+								src="./assets/images/carousel/carrera.png"
+								class="d-block w-100"
+								alt="carrera"
+							/>
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Carreras Programadas</h5>
+								<p>
+									Carreras en Buenos Aires. Inscripción
+									abierta
+								</p>
+							</div>
+						</div>
+						<div class="carousel-item" data-bs-interval="4000">
+							<img
+								src="./assets/images/carousel/playera_dama.png"
+								class="d-block w-100"
+								alt="playera dama"
+							/>
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Productos para todos</h5>
+								<p>
+									Tenemos productos para cualquier tipo de
+									ocación
+								</p>
+							</div>
+						</div>
+						<div class="carousel-item" data-bs-interval="4000">
+							<img
+								src="./assets/images/carousel/todos_productos.jpg"
+								class="d-block w-100"
+								alt="todos los productos"
+							/>
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Invovamos</h5>
+								<p>
+									Todos los productos tecnológicos en un solo
+									lugar
+								</p>
+							</div>
+						</div>
+					</div>
+					<button
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#carouselExampleCaptions"
+						data-bs-slide="prev"
+					>
+						<span
+							class="carousel-control-prev-icon"
+							aria-hidden="true"
+						></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#carouselExampleCaptions"
+						data-bs-slide="next"
+					>
+						<span
+							class="carousel-control-next-icon"
+							aria-hidden="true"
+						></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+				<!--Carousel end-->
+			</header>
+			<!--Header fin-->
 
-         <!--Carousel-->
-         <div id="carouselExampleCaptions" class="carousel slide mt-5 pt-4" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                  aria-current="true" aria-label="Slide 1"></button>
-               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                  aria-label="Slide 2"></button>
-               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                  aria-label="Slide 3"></button>
-               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
-                  aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-               <div class="carousel-item active" data-bs-interval="4000">
-                  <img src="/assets/images/carousel/muc_off.jpg" class="d-block w-100" alt="muc_off">
-                  <div class="carousel-caption d-none d-md-block">
-                     <h5>Muc Off Profesional</h5>
-                     <p>Todos los Muc Off en nuestro MarketPlace</p>
-                  </div>
-               </div>
-               <div class="carousel-item" data-bs-interval="4000">
-                  <img src="./assets/images/carousel/carrera.png" class="d-block w-100" alt="carrera">
-                  <div class="carousel-caption d-none d-md-block">
-                     <h5>Carreras Programadas</h5>
-                     <p>Carreras en Buenos Aires. Inscripción abierta</p>
-                  </div>
-               </div>
-               <div class="carousel-item" data-bs-interval="4000">
-                  <img src="./assets/images/carousel/playera_dama.png" class="d-block w-100" alt="playera dama">
-                  <div class="carousel-caption d-none d-md-block">
-                     <h5>Productos para todos</h5>
-                     <p>Tenemos productos para cualquier tipo de ocación</p>
-                  </div>
-               </div>
-               <div class="carousel-item" data-bs-interval="4000">
-                  <img src="./assets/images/carousel/todos_productos.jpg" class="d-block w-100"
-                     alt="todos los productos">
-                  <div class="carousel-caption d-none d-md-block">
-                     <h5>Invovamos</h5>
-                     <p>Todos los productos tecnológicos en un solo lugar</p>
-                  </div>
-               </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-               data-bs-slide="prev">
-               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-               <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-               data-bs-slide="next">
-               <span class="carousel-control-next-icon" aria-hidden="true"></span>
-               <span class="visually-hidden">Next</span>
-            </button>
-         </div>
-         <!--Carousel end-->
-      </header>
-      <!--Header fin-->
+			<div class="container mt-5">
+				<!--Section mas vendidos-->
+				<section class="mas-vendidos pt-5">
+					<h3 class="display-3 h3 text-uppercase text-center">
+						productos mas vendidos
+					</h3>
+					<div
+						class="container mas-vendidos-card d-block d-md-flex justify-content-center pt-5"
+					>
+						<div class="card mx-3" style="">
+							<img
+								src="./assets/images/mas-vendidos/bici_1.jpg"
+								class="card-img-top"
+								alt="..."
+							/>
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">
+									Some quick example text to build on the card
+									title and make up the bulk of the card's
+									content.
+								</p>
+								<a href="#" class="btn btn-primary"
+									>Go somewhere</a
+								>
+							</div>
+						</div>
+						<div class="card mx-3" style="">
+							<img
+								src="./assets/images/mas-vendidos/casco_1.jpg"
+								class="card-img-top"
+								alt="..."
+							/>
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">
+									Some quick example text to build on the card
+									title and make up the bulk of the card's
+									content.
+								</p>
+								<a href="#" class="btn btn-primary"
+									>Go somewhere</a
+								>
+							</div>
+						</div>
+						<div class="card mx-3" style="">
+							<img
+								src="./assets/images/mas-vendidos/cuenta_vueltas.jpg"
+								class="card-img-top"
+								alt="..."
+							/>
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">
+									Some quick example text to build on the card
+									title and make up the bulk of the card's
+									content.
+								</p>
+								<a href="#" class="btn btn-primary"
+									>Go somewhere</a
+								>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!--Section mas vendidos-->
 
-      <div class="container mt-5">
-         <!--Section mas vendidos-->
-         <section class="mas-vendidos pt-5">
-            <h3 class="display-3 h3 text-uppercase text-center">productos mas vendidos</h3>
-            <div class="container mas-vendidos-card d-block d-md-flex justify-content-center pt-5">
-               <div class="card mx-3" style="">
-                  <img src="./assets/images/mas-vendidos/bici_1.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                     <h5 class="card-title">Card title</h5>
-                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                     <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-               </div>
-               <div class="card  mx-3" style="">
-                  <img src="./assets/images/mas-vendidos/casco_1.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                     <h5 class="card-title">Card title</h5>
-                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                     <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-               </div>
-               <div class="card  mx-3" style="">
-                  <img src="./assets/images/mas-vendidos/cuenta_vueltas.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                     <h5 class="card-title">Card title</h5>
-                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                     <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-               </div>
-            </div>
-         </section>
-         <!--Section mas vendidos-->
+				<!--Section compra segura-->
+				<section class="info-pagos container mt-5 pt-5">
+					<div class="row">
+						<div
+							class="col-12 col-md-6 text-center align-self-center"
+						>
+							<h3 class="h5 display-5 text-head">
+								Envio a todo el país
+							</h3>
+							<p>
+								Tu compra esta protegida. Ademas tenemos envios
+								a todo el pais mediante Mercado Pago y Mercado
+								Envios.
+							</p>
+						</div>
+						<div class="col-12 col-md-6">
+							<img
+								src="./assets/images/pagos-logo.svg"
+								alt="Pagos"
+							/>
+						</div>
+					</div>
+				</section>
+				<!--Section compra segura fin-->
+			</div>
 
-         <!--Section compra segura-->
-         <section class="info-pagos container mt-5 pt-5">
-            <div class="row">
-               <div class="col-12 col-md-6 text-center align-self-center">
-                  <h3 class="h5 display-5 text-head">Envio a todo el país</h3>
-                  <p>Tu compra esta protegida. Ademas tenemos envios a todo el pais mediante Mercado Pago y Mercado
-                     Envios.</p>
-               </div>
-               <div class="col-12 col-md-6">
-                  <img src="./assets/images/pagos-logo.svg" alt="Pagos">
-               </div>
-            </div>
-         </section>
-         <!--Section compra segura fin-->
-      </div>
+			<!--Footer-->
+			<footer class="footer container-fluid">
+				<div class="row d-flex justify-content-center p-5">
+					<div
+						class="menu-footer justify-content-center col-12 col-md-6"
+					>
+						<ul class="nav flex-column align-items-center">
+							<li class="nav-item">
+								<a class="nav-link active" href="#">Contacto</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#"
+									>Preguntas Frecuentes</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Sobre nosotros</a>
+							</li>
+						</ul>
+					</div>
+					<div class="menu-redes-sociales col-12 col-md-6">
+						<ul class="nav justify-content-center pt-3">
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<i class="fa-brands fa-facebook"></i>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<i
+										class="fa-brands fa-instagram-square"
+									></i>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<i class="fa-brands fa-linkedin"></i>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<i class="fa-brands fa-whatsapp-square"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<p class="text-center">Todos los derechos reservados</p>
+			</footer>
+			<!--Footer fin-->
+		</div>
+		<!--Esqueleto principal fin-->
 
-      <!--Footer-->
-      <footer class="footer container-fluid">
-         <div class="row d-flex justify-content-center p-5">
-            <div class="menu-footer justify-content-center col-12 col-md-6">
-               <ul class="nav flex-column align-items-center">
-                  <li class="nav-item">
-                     <a class="nav-link active" href="#">Contacto</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#">Preguntas Frecuentes</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#">Sobre nosotros</a>
-                  </li>
-               </ul>
-            </div>
-            <div class="menu-redes-sociales col-12 col-md-6">
-               <ul class="nav justify-content-center pt-3">
-                  <li class="nav-item">
-                     <a class="nav-link" href="#">
-                        <i class="fa-brands fa-facebook"></i>
-                     </a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#">
-                        <i class="fa-brands fa-instagram-square"></i>
-                     </a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#">
-                        <i class="fa-brands fa-linkedin"></i>
-                     </a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#">
-                        <i class="fa-brands fa-whatsapp-square"></i>
-                     </a>
-                  </li>
-               </ul>
-            </div>
-         </div>
-         <p class="text-center">Todos los derechos reservados</p>
-      </footer>
-      <!--Footer fin-->
-   </div>
-   <!--Esqueleto principal fin-->
-
-   <script type="module" src="./src/index.js"></script>
-   <!-- Bootstrap 5 CDN JS-->
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
+		<script type="module" src="./src/index.js"></script>
+		<!-- Bootstrap 5 CDN JS-->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+	</body>
 </html>

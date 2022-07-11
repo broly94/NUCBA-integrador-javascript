@@ -143,7 +143,7 @@ export const DataBase =
         },
         {
             "id": 3,
-            "nombre": "Bolso porta objetos",
+            "nombre": "Bolso",
             "marca": "S/E",
             "color": "Negro",
             "imagen": "../../assets/images/marketplace/gadget/bolso_1.jpg",
@@ -164,7 +164,7 @@ export const DataBase =
         },
         {
             "id": 2,
-            "nombre": "Bicicleta Electrica",
+            "nombre": "Bicicleta",
             "marca": "Fiat",
             "color": "Blanco",
             "imagen": "../../assets/images/marketplace/tecnologia/bicicleta_electrica_1.jpg",
@@ -173,7 +173,7 @@ export const DataBase =
         },
         {
             "id": 3,
-            "nombre": "Rodillo de entrenamiento",
+            "nombre": "Rodillo",
             "marca": "Shimano",
             "color": "Negro y Naranja",
             "imagen": "../../assets/images/marketplace/tecnologia/rodillo_1.jpg",

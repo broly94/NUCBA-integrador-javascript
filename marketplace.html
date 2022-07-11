@@ -100,12 +100,12 @@
         
         <div class="container-fluid">
             <!--Main-->
-            <h2 class="text-center h2 text-uppercase py-5">Productos</h2>
+            <h2 class="text-center h2 text-uppercase py-5 fw-bolder">Store Bike</h2>
             <main class="main justify-content-center">
                 <!--Aside-->
                 
                 <aside class="aside-categorias justify-content-start pt-5 flex-column sticky-top mt-5">
-                    <h2 class="text-center text-uppercase pb-4">Categorias</h2>
+                    <h2 class="text-center text-uppercase pb-4 fw-bolder">Categorias</h2>
                     <ul class="nav flex-column align-items-center justify-content-center nav-aside" id="nav-aside">
                         <li class="nav-item" id="li-bicicletas">
                             <a class="nav-link" href="#" id="bicicletas">Bicicletas</a>
@@ -127,7 +127,7 @@
                         <div class="section-busqueda">
                             <div class="form-group d-flex flex-column flex-md-row justify-content-center p-3 container">
                                 <input class="form-control m-2" type="search" placeholder="Ej: Venzo" />
-                                <select class="form-select m-2" name="select-filtros" id="select-filtro" value>
+                                <select class="form-select m-2" name="select-filtros" id="select-filtro">
                                     <option class="">Filtrar producto</option>
                                     <option class="" value="0">Mayor Precio</option>
                                     <option class="" value="1">Menor Precio</option>
@@ -139,6 +139,7 @@
                                 </select>
                             </div>
                         </div>
+                        <div id="cantidad-resultados"></div>
                     </div>
                     <section class="section-productos d-flex justify-content-center">
                         <div class="container">

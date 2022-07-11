@@ -1,14 +1,20 @@
-import { cardBicicletas, cardIndumentaria, cardGadget, cardTecnologia } from "../productos.draw.js";
+import {
+	cardBicicletas,
+	cardIndumentaria,
+	cardGadget,
+	cardTecnologia,
+} from "../productos.draw.js";
 
-const linkBicicletas = document.getElementById('bicicletas');
-const linkIndumentaria = document.getElementById('indumentaria');
-const linkGadget = document.getElementById('gadget');
-const linkTecnologia = document.getElementById('tecnologia');
+import { cantidadResultados } from "../cantidadResultados.js";
+
+const linkBicicletas = document.getElementById("bicicletas");
+const linkIndumentaria = document.getElementById("indumentaria");
+const linkGadget = document.getElementById("gadget");
+const linkTecnologia = document.getElementById("tecnologia");
 
 export const linkProductos = (navAside, divColumn, estado) => {
-
+	
 	for (const hijos of navAside) {
-
 		//console.log(hijos); //Descomentar para usar
 
 		hijos.addEventListener("click", (e) => {
@@ -42,6 +48,7 @@ export const linkProductos = (navAside, divColumn, estado) => {
 						}
 					}
 					break;
+
 				case "indumentaria":
 					divColumn.innerHTML = "";
 					cardIndumentaria(divColumn, estado);
@@ -58,6 +65,7 @@ export const linkProductos = (navAside, divColumn, estado) => {
 						}
 					}
 					break;
+
 				case "gadget":
 					divColumn.innerHTML = "";
 					cardGadget(divColumn, estado);
@@ -74,6 +82,7 @@ export const linkProductos = (navAside, divColumn, estado) => {
 						}
 					}
 					break;
+
 				case "tecnologia":
 					divColumn.innerHTML = "";
 					cardTecnologia(divColumn, estado);
@@ -91,6 +100,9 @@ export const linkProductos = (navAside, divColumn, estado) => {
 					}
 					break;
 			}
+			
+			//Pinta la cantidad de resultados devueltos segun la categoria que elija
+			cantidadResultados(divColumn);
 		});
 	}
 };

@@ -17,7 +17,7 @@ export const cardBicicletas = (divColumn, { bicicletas }) => {
                             <li>Composicion: ${composicion}</li>
                             <li>Rodado: ${rodado}</li>
                         </ul>
-                        <p class="card-text text-center fs-1 p-3">$${precio}</p>
+                        <p class="card-text">$${Number.parseFloat(precio).toFixed(3)}</p>
                         <a href="#" class="btn btn-outline-secondary">Añadir al carrito</a>
                     </div>
             </div>
@@ -49,7 +49,7 @@ export const cardIndumentaria = (divColumn, { indumentaria }) => {
                             <li>Color: ${color}</li>
                             <li>Composicion: ${composicion}</li>
                         </ul>
-                        <p class="card-text text-center fs-1 p-3">$${precio}</p>
+                        <p class="card-text">$${Number.parseFloat(precio).toFixed(3)}</p>
                         <a href="#" class="btn btn-outline-secondary">Añadir al carrito</a>
                     </div>
             </div>
@@ -77,7 +77,7 @@ export const cardGadget = (divColumn, { gadget }) => {
                             <li>Color: ${color}</li>
                             <li>Composicion: ${composicion}</li>
                         </ul>
-                        <p class="card-text text-center fs-1 p-3">$${precio}</p>
+                        <p class="card-text">$${Number.parseFloat(precio).toFixed(3)}</p>
                         <a href="#" class="btn btn-outline-secondary">Añadir al carrito</a>
                     </div>
             </div>
@@ -105,7 +105,7 @@ export const cardTecnologia = (divColumn, { tecnologia }) => {
                             <li>Color: ${color}</li>
                             <li>Composicion: ${composicion}</li>
                         </ul>
-                        <p class="card-text text-center fs-1 p-3">$${precio}</p>
+                        <p class="card-text">$${Number.parseFloat(precio).toFixed(3)}</p>
                         <a href="#" class="btn btn-outline-secondary">Añadir al carrito</a>
                     </div>
             </div>

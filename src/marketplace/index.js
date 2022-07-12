@@ -1,7 +1,7 @@
 import { pintarProductosInicio } from './pintarIntroProductos.js';
 import { linkProductos } from './aside/linkProductos.js';
 import { filtroProductosSelect } from './filtrosProductos.js';
-filtroProductosSelect
+
 /** Tags Html Aside */
 export const navAside = document.querySelectorAll('.nav-aside');
 /** Tags Html productos */
@@ -16,7 +16,7 @@ const indexProductos = (estado) => {
     linkProductos(navAside, divColumn, estado);
     
     filtroProductosSelect(divColumn);
-
+    
 }
 
 export {

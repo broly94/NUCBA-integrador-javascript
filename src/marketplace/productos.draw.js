@@ -6,7 +6,7 @@ export const cardBicicletas = (divColumn, { bicicletas }) => {
 		bicicletasClean.forEach((bici) => {
 			const { nombre, marca, color, imagen, composicion, rodado, precio} = bici;
 			divColumn.innerHTML += `
-            <div class="card card-productos d-flex justify-content-center">
+            <div class="card card-productos d-flex justify-content-center" data-precio="${Number.parseFloat(precio).toFixed(3)}">
                     <img class="card-img-top"
                     src="${imagen}"
                     alt="Card image">
@@ -39,7 +39,7 @@ export const cardIndumentaria = (divColumn, { indumentaria }) => {
 			const { nombre, marca, color, imagen, composicion, precio } =
 				indument;
 			divColumn.innerHTML += `
-            <div class="card card-productos d-flex justify-content-center">
+            <div class="card card-productos d-flex justify-content-center" data-precio="${Number.parseFloat(precio).toFixed(3)}">
                     <img class="card-img-top"
                     src="${imagen}"
                     alt="Card image">
@@ -67,7 +67,7 @@ export const cardGadget = (divColumn, { gadget }) => {
 
 			const { nombre, marca, color, imagen, composicion, precio } = gad;
 			divColumn.innerHTML += `
-            <div class="card card-productos d-flex justify-content-center">
+            <div class="card card-productos d-flex justify-content-center" data-precio="${Number.parseFloat(precio).toFixed(3)}">
                     <img class="card-img-top"
                     src="${imagen}"
                     alt="Card image">
@@ -95,7 +95,7 @@ export const cardTecnologia = (divColumn, { tecnologia }) => {
             
 			const { nombre, marca, color, imagen, composicion, precio } = tec;
 			divColumn.innerHTML += `
-            <div class="card card-productos d-flex justify-content-center">
+            <div class="card card-productos d-flex justify-content-center" data-precio="${Number.parseFloat(precio).toFixed(3)}">
                     <img class="card-img-top"
                     src="${imagen}"
                     alt="Card image">

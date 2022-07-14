@@ -14,27 +14,23 @@ export const filtroProductosSelect = (divColumn) => {
 				const preciosOrdenadosMayor = arrayNodos.sort((a, b) => {
 					const num1 = parseFloat(a.getAttribute("data-precio"));
 					const num2 = parseFloat(b.getAttribute("data-precio"));
-					if (num1 < num2) {
-						return 1;
-					}
-					return 0;
+					if (num1 === num2) return 0;
+					if (num1 < num2) return 1;
+					return -1;
 				});
 				console.log(preciosOrdenadosMayor)
 				preciosOrdenadosMayor.map((elementos) => {
-					//onsole.log(elementos.getAttribute("data-precio"))
 					divColumn.appendChild(elementos);
 				});
 				break;
-
 			case "1":
 				divColumn.innerHTML = "";
 				const preciosOrdenadosMenor = arrayNodos.sort((a, b) => {
 					const num1 = parseFloat(a.getAttribute("data-precio"));
 					const num2 = parseFloat(b.getAttribute("data-precio"));
-					if (num1 > num2) {
-						return 1;
-					}
-					return 0;
+					if (num1 === num2) return 0;
+					if (num1 > num2) return 1;
+					return -1;
 				});
 				preciosOrdenadosMenor.map((elementos) => {
 					console.log(elementos);

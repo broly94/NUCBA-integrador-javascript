@@ -1,3 +1,11 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+* Leonel
+*/
+
 /**VARIABLES */
 /**COLORES */
 $color-uno: #233142;
@@ -16,12 +24,14 @@ $fuente-dosis: "Kantumruy Pro", sans-serif;
 
 /** CONFIGURACION GENERAL */
 html {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 *,
 *:before,
 *:after {
-	box-sizing: inherit;
+	-webkit-box-sizing: inherit;
+	        box-sizing: inherit;
 }
 body {
 	background-color: $color-cuatro;
@@ -104,6 +114,8 @@ select {
 
 /** CONFIGURACION ESQUELETO MAIN*/
 .main {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	.aside-categorias {
 		display: none;
@@ -113,11 +125,17 @@ select {
 		padding-bottom: 50px;
 		margin-bottom: 50px;
 		.productos-column {
-			display: -webkit-flex;
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			justify-content: space-around;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: row;
+			        flex-direction: row;
+			-ms-flex-wrap: wrap;
+			    flex-wrap: wrap;
+			-ms-flex-pack: distribute;
+			    justify-content: space-around;
 			width: 100%;
 			gap: 20px;
 			.card {
@@ -167,13 +185,18 @@ select {
 
 @media (min-width: 990px) and (min-width: 625px) {
 	.main {
+		display: -ms-grid;
 		display: grid;
 		width: 100%;
-		grid-template-areas: "aside contenedor-card-busqueda";
+		    grid-template-areas: "aside contenedor-card-busqueda";
+		-ms-grid-rows: 2;
 		grid-template-rows: 2;
+		-ms-grid-columns: 1fr 4fr;
 		grid-template-columns: 1fr 4fr;
 
 		.aside-categorias {
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
 			grid-area: aside;
 			height: 500px;
@@ -215,6 +238,17 @@ select {
 				}
 			}
 		}
+	}
+}
+
+@media (min-width: 990px) and (min-width: 625px){
+	.aside-categorias {
+		-ms-grid-row: 1;
+		-ms-grid-column: 1
+	}
+	.contenedor-card-busqueda {
+		-ms-grid-row: 1;
+		-ms-grid-column: 2
 	}
 }
 

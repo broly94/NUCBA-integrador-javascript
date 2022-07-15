@@ -11,8 +11,9 @@ export const cardBicicletas = (divColumn, { bicicletas }) => {
                     src="${imagen}"
                     alt="Card image">
                     <div class="card-body justify-content-center">
-                        <h4 class="card-title">${nombre} ${marca}</h4>
+                        <h4 class="card-title">${nombre}</h4>
                         <ul>
+                            <li>Marca: ${marca}</li>
                             <li>Color: ${color}</li>
                             <li>Composicion: ${composicion}</li>
                             <li>Rodado: ${rodado}</li>
@@ -44,8 +45,9 @@ export const cardIndumentaria = (divColumn, { indumentaria }) => {
                     src="${imagen}"
                     alt="Card image">
                     <div class="card-body justify-content-center">
-                        <h4 class="card-title">${nombre} ${marca}</h4>
+                        <h4 class="card-title">${nombre}</h4>
                         <ul>
+                            <li>Marca: ${marca}</li>
                             <li>Color: ${color}</li>
                             <li>Composicion: ${composicion}</li>
                         </ul>
@@ -76,8 +78,9 @@ export const cardGadget = (divColumn, { gadget }) => {
                     src="${imagen}"
                     alt="Card image">
                     <div class="card-body justify-content-center">
-                        <h4 class="card-title">${nombre} ${marca}</h4>
+                        <h4 class="card-title">${nombre}</h4>
                         <ul>
+                            <li>Marca: ${marca}</li>
                             <li>Color: ${color}</li>
                             <li>Composicion: ${composicion}</li>
                         </ul>
@@ -108,8 +111,9 @@ export const cardTecnologia = (divColumn, { tecnologia }) => {
                     src="${imagen}"
                     alt="Card image">
                     <div class="card-body justify-content-center">
-                        <h4 class="card-title">${nombre} ${marca}</h4>
+                        <h4 class="card-title">${nombre}</h4>
                         <ul>
+                            <li>Marca: ${marca}</li>
                             <li>Color: ${color}</li>
                             <li>Composicion: ${composicion}</li>
                         </ul>

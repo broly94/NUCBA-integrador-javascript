@@ -21,6 +21,20 @@ export const filtroProductosSelect = (divColumn) => {
 	});
 };
 
+export const filtroProductosInput = (divColumn) => {
+	const inputFiltro = document.getElementById('input-filtro');
+	inputFiltro.addEventListener('keypress', (e) => {
+		if(e.key === "Enter"){
+			e.preventDefault();
+			const arrayNodos = Array.from(divColumn.childNodes).filter((element) => element.nodeName === "DIV");
+			const productosFiltrados = arrayNodos.filter((producto) => {
+				console.log(producto);
+			})
+			console.log(productosFiltrados);
+		}
+	})
+}
+
 const tipoFiltro = (arrayNodos, tipo) => {
 	return arrayNodos.sort((a, b) => {
 		const num1 = parseFloat(a.getAttribute("data-precio"));

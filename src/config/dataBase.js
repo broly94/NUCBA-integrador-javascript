@@ -135,7 +135,7 @@ export const DataBase =
         {
             "id": 2,
             "nombre": "Kit Herramientas",
-            "marca": "S/E",
+            "marca": "Black and Decker",
             "color": "Negro",
             "imagen": "../../assets/images/marketplace/gadget/kit_herramientas_1.jpg",
             "composicion": "S/E",
@@ -144,7 +144,7 @@ export const DataBase =
         {
             "id": 3,
             "nombre": "Bolso",
-            "marca": "S/E",
+            "marca": "Shimano",
             "color": "Negro",
             "imagen": "../../assets/images/marketplace/gadget/bolso_1.jpg",
             "composicion": "S/E",

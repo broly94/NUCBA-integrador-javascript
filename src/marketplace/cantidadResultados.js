@@ -15,5 +15,5 @@ export const cantidadResultados = (divColumn) => {
 	);
 	targetCantidadResultados.innerHTML = '';
     targetCantidadResultados.innerHTML += `${resultados.length} Resultados`
-    targetCantidadResultados.className = 'text-center m-3 p-3'
+    targetCantidadResultados.className = 'text-center m-3 p-3 fs-4 text-uppercase'
 };

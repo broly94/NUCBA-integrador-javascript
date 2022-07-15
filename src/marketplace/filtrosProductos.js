@@ -1,7 +1,7 @@
 export const filtroProductosSelect = (divColumn) => {
+
 	const selectFiltro = document.getElementById("select-filtro");
 
-	
 	selectFiltro.addEventListener("change", (e) => {
 
 		const valueSelect = e.target.value;
@@ -11,32 +11,27 @@ export const filtroProductosSelect = (divColumn) => {
 		switch (valueSelect) {
 			case "0":
 				divColumn.innerHTML = "";
-				const preciosOrdenadosMayor = arrayNodos.sort((a, b) => {
-					const num1 = parseFloat(a.getAttribute("data-precio"));
-					const num2 = parseFloat(b.getAttribute("data-precio"));
-					if (num1 === num2) return 0;
-					if (num1 < num2) return 1;
-					return -1;
-				});
-				console.log(preciosOrdenadosMayor)
-				preciosOrdenadosMayor.map((elementos) => {
-					divColumn.appendChild(elementos);
-				});
+				tipoFiltro(arrayNodos, "increment").map((elementos) => divColumn.appendChild(elementos));
 				break;
 			case "1":
 				divColumn.innerHTML = "";
-				const preciosOrdenadosMenor = arrayNodos.sort((a, b) => {
-					const num1 = parseFloat(a.getAttribute("data-precio"));
-					const num2 = parseFloat(b.getAttribute("data-precio"));
-					if (num1 === num2) return 0;
-					if (num1 > num2) return 1;
-					return -1;
-				});
-				preciosOrdenadosMenor.map((elementos) => {
-					console.log(elementos);
-					divColumn.appendChild(elementos);
-				});
+				tipoFiltro(arrayNodos, "decrement").map((elementos) => divColumn.appendChild(elementos));
 				break;
 		}
 	});
 };
+
+const tipoFiltro = (arrayNodos, tipo) => {
+	return arrayNodos.sort((a, b) => {
+		const num1 = parseFloat(a.getAttribute("data-precio"));
+		const num2 = parseFloat(b.getAttribute("data-precio"));
+		if (num1 === num2) return 0;
+		if (tipo === "increment") {
+			if (num1 < num2) return 1;
+		}
+		if (tipo === "decrement"){
+			if (num1 > num2) return 1;
+		}
+		return -1;
+	});
+}

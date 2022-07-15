@@ -1,12 +1,12 @@
 export const cardBicicletas = (divColumn, { bicicletas }) => {
-	if (bicicletas) {
+	if (bicicletas.length > 0) {
 		const bicicletasClean = bicicletas.filter(
 			(data, index) => bicicletas.indexOf(data) === index,
 		);
 		bicicletasClean.forEach((bici) => {
 			const { nombre, marca, color, imagen, composicion, rodado, precio} = bici;
 			divColumn.innerHTML += `
-            <div class="card card-productos d-flex justify-content-center" data-precio="${Number.parseFloat(precio).toFixed(3)}">
+            <div class="card card-productos d-flex justify-content-center animate__animated animate__fadeIn" data-precio="${Number.parseFloat(precio).toFixed(3)}">
                     <img class="card-img-top"
                     src="${imagen}"
                     alt="Card image">
@@ -25,13 +25,13 @@ export const cardBicicletas = (divColumn, { bicicletas }) => {
 		});
 	} else {
 		divColumn.innerHTML = `
-            <h1 class="text-center h1 text-uppercase">No hay productos</h1>
+            <h1 class="text-center h1 text-uppercase animate__animated animate__fadeIn">No hay productos</h1>
         `;
 	}
 };
 
 export const cardIndumentaria = (divColumn, { indumentaria }) => {
-	if (indumentaria) {
+	if (indumentaria.length > 0) {
 		const indumentariaClean = indumentaria.filter(
 			(data, index) => indumentaria.indexOf(data) === index,
 		);
@@ -39,7 +39,7 @@ export const cardIndumentaria = (divColumn, { indumentaria }) => {
 			const { nombre, marca, color, imagen, composicion, precio } =
 				indument;
 			divColumn.innerHTML += `
-            <div class="card card-productos d-flex justify-content-center" data-precio="${Number.parseFloat(precio).toFixed(3)}">
+            <div class="card card-productos d-flex justify-content-center animate__animated animate__fadeIn" data-precio="${Number.parseFloat(precio).toFixed(3)}">
                     <img class="card-img-top"
                     src="${imagen}"
                     alt="Card image">
@@ -55,11 +55,15 @@ export const cardIndumentaria = (divColumn, { indumentaria }) => {
             </div>
         `;
 		});
+	} else {
+		divColumn.innerHTML = `
+            <h1 class="text-center h1 text-uppercase animate__animated animate__fadeIn">No hay productos</h1>
+        `;
 	}
 };
 
 export const cardGadget = (divColumn, { gadget }) => {
-    if (gadget) {
+    if (gadget.length > 0) {
 		const gadgetClean = gadget.filter(
 			(data, index) => gadget.indexOf(data) === index,
 		);
@@ -67,7 +71,7 @@ export const cardGadget = (divColumn, { gadget }) => {
 
 			const { nombre, marca, color, imagen, composicion, precio } = gad;
 			divColumn.innerHTML += `
-            <div class="card card-productos d-flex justify-content-center" data-precio="${Number.parseFloat(precio).toFixed(3)}">
+            <div class="card card-productos d-flex justify-content-center animate__animated animate__fadeIn" data-precio="${Number.parseFloat(precio).toFixed(3)}">
                     <img class="card-img-top"
                     src="${imagen}"
                     alt="Card image">
@@ -83,11 +87,15 @@ export const cardGadget = (divColumn, { gadget }) => {
             </div>
         `;
 		});
+	} else {
+		divColumn.innerHTML = `
+            <h1 class="text-center h1 text-uppercase animate__animated animate__fadeIn">No hay productos</h1>
+        `;
 	}
 };
 
 export const cardTecnologia = (divColumn, { tecnologia }) => {
-    if (tecnologia) {
+    if (tecnologia.length > 0) {
 		const tecnologiaClean = tecnologia.filter(
 			(data, index) => tecnologia.indexOf(data) === index,
 		);
@@ -95,7 +103,7 @@ export const cardTecnologia = (divColumn, { tecnologia }) => {
             
 			const { nombre, marca, color, imagen, composicion, precio } = tec;
 			divColumn.innerHTML += `
-            <div class="card card-productos d-flex justify-content-center" data-precio="${Number.parseFloat(precio).toFixed(3)}">
+            <div class="card card-productos d-flex justify-content-center animate__animated animate__fadeIn" data-precio="${Number.parseFloat(precio).toFixed(3)}">
                     <img class="card-img-top"
                     src="${imagen}"
                     alt="Card image">
@@ -111,5 +119,9 @@ export const cardTecnologia = (divColumn, { tecnologia }) => {
             </div>
         `;
 		});
+	} else {
+		divColumn.innerHTML = `
+            <h1 class="text-center h1 text-uppercase animate__animated animate__fadeIn">No hay productos</h1>
+        `;
 	}
 };

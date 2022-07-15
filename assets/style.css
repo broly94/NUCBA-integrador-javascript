@@ -40,11 +40,14 @@ p {
 a {
   color: black !important;
   margin: 5px;
-  border-radius: 0px !important;
+  border-radius: 3px !important;
+  opacity: 0.8;
+  transition: 0.3s;
 }
 a:hover {
-  background-color: black !important;
+  background-color: #171717 !important;
   color: white !important;
+  opacity: 1;
 }
 
 h1,
@@ -83,7 +86,7 @@ select {
 }
 
 /** CONFIGURACION GENERAL END*/
-/** HEADER **/
+/** HEADER y NAVBAR**/
 .contenedor-principal .header {
   background-color: #233142;
   color: white !important;
@@ -91,15 +94,15 @@ select {
 .contenedor-principal .header img {
   max-width: 100%;
 }
-
-/** HEADER END **/
-/** NAVBAR */
-.nav-principal {
-  margin-right: 0px !important;
-  color: #e3e3e3 !important;
+.contenedor-principal .header nav .navbar-brand:hover {
+  background-color: white !important;
+}
+.contenedor-principal .header nav .navbar-brand i {
+  font-size: 3rem !important;
+  color: #171717;
 }
 
-/** NAVBAR */
+/** HEADER Y NAVBAR END **/
 /** CONFIGURACION ESQUELETO MAIN*/
 .main {
   display: flex;
@@ -148,11 +151,14 @@ select {
   color: black !important;
   font-size: 1.2rem;
   font-family: "Kantumruy Pro", sans-serif;
+  opacity: 0.8 !important;
+  transition: 0.3s !important;
 }
 .main .section-productos .productos-column .card .card-body a:hover {
   color: white !important;
   border: 1px solid black !important;
   background-color: black !important;
+  opacity: 1 !important;
 }
 
 @media (min-width: 990px) and (min-width: 625px) {
@@ -189,6 +195,9 @@ select {
   }
   .main .contenedor-card-busqueda .contenedor-busqueda {
     width: 50%;
+    padding: 30px;
+    margin-bottom: 10px;
+    border-radius: 3px;
   }
   .main .contenedor-card-busqueda #select-categorias {
     display: none;
@@ -205,7 +214,6 @@ select {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
   }
-
   .contenedor-card-busqueda {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
@@ -221,16 +229,22 @@ select {
   font-size: 3rem;
   margin-top: 20px;
   color: white !important;
+  opacity: 0.7 !important;
+  transition: 0.4s !important;
 }
 .footer .menu-redes-sociales a:hover {
   background-color: #f95959;
-  color: #233142 !important;
+  color: white;
+  opacity: 1 !important;
 }
 .footer .menu-footer a {
   color: white !important;
+  opacity: 0.8;
+  transition: 0.4s !important;
 }
 .footer .menu-footer a:hover {
   background-color: #f95959;
+  opacity: 1;
 }
 
 /** FOOTER END *//*# sourceMappingURL=style.css.map */

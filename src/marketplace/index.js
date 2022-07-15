@@ -1,5 +1,5 @@
 import { pintarProductosInicio } from './pintarIntroProductos.js';
-import { linkProductos } from './aside/linkProductos.js';
+import { handleProductos } from './handleProductos.js';
 import { filtroProductosSelect } from './filtrosProductos.js';
 
 /** Tags Html Aside */
@@ -10,12 +10,12 @@ export const divColumn = document.querySelector('.productos-column');
 const indexProductos = (estado) => {
 
     //Pintar por primera vez en marketplace/productos main
-    pintarProductosInicio(estado, divColumn, 2);
+    pintarProductosInicio(estado, divColumn, 1);
 
-    //Pintar productos 
-    linkProductos(navAside, divColumn, estado);
-    
     filtroProductosSelect(divColumn);
+    
+    //Pintar productos 
+    handleProductos(navAside, divColumn, estado);
     
 }
 

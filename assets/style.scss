@@ -25,13 +25,13 @@ $fuente-dosis: "Kantumruy Pro", sans-serif;
 /** CONFIGURACION GENERAL */
 html {
 	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
+	box-sizing: border-box;
 }
 *,
 *:before,
 *:after {
 	-webkit-box-sizing: inherit;
-	        box-sizing: inherit;
+	box-sizing: inherit;
 }
 body {
 	background-color: $color-cuatro;
@@ -49,10 +49,13 @@ p {
 a {
 	color: black !important;
 	margin: 5px;
-	border-radius: 0px!important;
+	border-radius: 3px !important;
+	opacity: 0.8;
+	transition: 0.3s;
 	&:hover {
-		background-color: black !important;
+		background-color: #171717 !important;
 		color: white !important;
+		opacity: 1;
 	}
 }
 
@@ -85,15 +88,15 @@ select {
 }
 
 .card-text {
-	font-size: 1.7rem!important;
-	font-weight: bold!important;
-	color: black!important;
+	font-size: 1.7rem !important;
+	font-weight: bold !important;
+	color: black !important;
 	text-align: center;
 }
 
 /** CONFIGURACION GENERAL END*/
 
-/** HEADER **/
+/** HEADER y NAVBAR**/
 .contenedor-principal {
 	.header {
 		background-color: $color-uno;
@@ -101,16 +104,21 @@ select {
 		img {
 			max-width: 100%;
 		}
+		nav {
+			.navbar-brand {
+				&:hover {
+					background-color: white!important;
+				}
+				i {
+					font-size: 3rem !important;
+					color: #171717;
+
+				}
+			}
+		}
 	}
 }
-/** HEADER END **/
-
-/** NAVBAR */
-.nav-principal {
-	margin-right: 0px !important;
-	color: $color-cuatro !important;
-}
-/** NAVBAR */
+/** HEADER Y NAVBAR END **/
 
 /** CONFIGURACION ESQUELETO MAIN*/
 .main {
@@ -130,12 +138,12 @@ select {
 			display: flex;
 			-webkit-box-orient: horizontal;
 			-webkit-box-direction: normal;
-			    -ms-flex-direction: row;
-			        flex-direction: row;
+			-ms-flex-direction: row;
+			flex-direction: row;
 			-ms-flex-wrap: wrap;
-			    flex-wrap: wrap;
+			flex-wrap: wrap;
 			-ms-flex-pack: distribute;
-			    justify-content: space-around;
+			justify-content: space-around;
 			width: 100%;
 			gap: 20px;
 			.card {
@@ -171,10 +179,13 @@ select {
 						color: black !important;
 						font-size: 1.2rem;
 						font-family: $fuente-dosis;
+						opacity: 0.8 !important;
+						transition: 0.3s !important;
 						&:hover {
 							color: white !important;
 							border: 1px solid black !important;
-							background-color: black!important;
+							background-color: black !important;
+							opacity: 1 !important;
 						}
 					}
 				}
@@ -188,7 +199,7 @@ select {
 		display: -ms-grid;
 		display: grid;
 		width: 100%;
-		    grid-template-areas: "aside contenedor-card-busqueda";
+		grid-template-areas: "aside contenedor-card-busqueda";
 		-ms-grid-rows: 2;
 		grid-template-rows: 2;
 		-ms-grid-columns: 1fr 4fr;
@@ -219,6 +230,13 @@ select {
 
 			.contenedor-busqueda {
 				width: 50%;
+				padding: 30px;
+				margin-bottom: 10px;
+				//background-color: #171717;
+				border-radius: 3px;
+
+				h4 {
+				}
 			}
 
 			#select-categorias {
@@ -241,14 +259,14 @@ select {
 	}
 }
 
-@media (min-width: 990px) and (min-width: 625px){
+@media (min-width: 990px) and (min-width: 625px) {
 	.aside-categorias {
 		-ms-grid-row: 1;
-		-ms-grid-column: 1
+		-ms-grid-column: 1;
 	}
 	.contenedor-card-busqueda {
 		-ms-grid-row: 1;
-		-ms-grid-column: 2
+		-ms-grid-column: 2;
 	}
 }
 
@@ -263,17 +281,23 @@ select {
 			font-size: 3rem;
 			margin-top: 20px;
 			color: white !important;
+			opacity: 0.7 !important;
+			transition: 0.4s !important;
 			&:hover {
 				background-color: $color-tres;
-				color: $color-uno !important;
+				color: white;
+				opacity: 1 !important;
 			}
 		}
 	}
 	.menu-footer {
 		a {
 			color: white !important;
+			opacity: 0.8;
+			transition: 0.4s !important;
 			&:hover {
 				background-color: $color-tres;
+				opacity: 1;
 			}
 		}
 	}

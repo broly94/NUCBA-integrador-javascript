@@ -22,13 +22,20 @@ export const filtroProductosSelect = (divColumn) => {
 };
 
 export const filtroProductosInput = (divColumn) => {
+
 	const inputFiltro = document.getElementById('input-filtro');
+	
 	inputFiltro.addEventListener('keypress', (e) => {
 		if(e.key === "Enter"){
 			e.preventDefault();
 			const arrayNodos = Array.from(divColumn.childNodes).filter((element) => element.nodeName === "DIV");
+			const inputFiltroValue = document.getElementById('input-filtro').value;
 			const productosFiltrados = arrayNodos.filter((producto) => {
-				console.log(producto);
+				const arrayLi = Array.from(producto.childNodes[3].childNodes[3].childNodes).filter(li => li.nodeName === 'LI');
+				const arrayMarcas = arrayLi.filter(marca => marca.getAttribute('data-marca') === 'Venzo')
+				console.log(arrayMarcas)
+				console.log(inputFiltroValue)
+
 			})
 			console.log(productosFiltrados);
 		}

@@ -13,7 +13,7 @@ export const cardBicicletas = (divColumn, { bicicletas }) => {
                     <div class="card-body justify-content-center">
                         <h4 class="card-title">${nombre}</h4>
                         <ul>
-                            <li>Marca: ${marca}</li>
+                            <li data-marca="${marca}">Marca: ${marca}</li>
                             <li>Color: ${color}</li>
                             <li>Composicion: ${composicion}</li>
                             <li>Rodado: ${rodado}</li>
@@ -47,7 +47,7 @@ export const cardIndumentaria = (divColumn, { indumentaria }) => {
                     <div class="card-body justify-content-center">
                         <h4 class="card-title">${nombre}</h4>
                         <ul>
-                            <li>Marca: ${marca}</li>
+                            <li data-marca="${marca}>Marca: ${marca}</li>
                             <li>Color: ${color}</li>
                             <li>Composicion: ${composicion}</li>
                         </ul>
@@ -80,7 +80,7 @@ export const cardGadget = (divColumn, { gadget }) => {
                     <div class="card-body justify-content-center">
                         <h4 class="card-title">${nombre}</h4>
                         <ul>
-                            <li>Marca: ${marca}</li>
+                            <li data-marca="${marca}>Marca: ${marca}</li>
                             <li>Color: ${color}</li>
                             <li>Composicion: ${composicion}</li>
                         </ul>
@@ -113,7 +113,7 @@ export const cardTecnologia = (divColumn, { tecnologia }) => {
                     <div class="card-body justify-content-center">
                         <h4 class="card-title">${nombre}</h4>
                         <ul>
-                            <li>Marca: ${marca}</li>
+                            <li data-marca="${marca}">Marca: ${marca}</li>
                             <li>Color: ${color}</li>
                             <li>Composicion: ${composicion}</li>
                         </ul>

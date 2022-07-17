@@ -5,7 +5,7 @@ export const filtroProductosSelect = (divColumn) => {
 	selectFiltro.addEventListener("change", (e) => {
 
 		const valueSelect = e.target.value;
-		
+
 		const arrayNodos = Array.from(divColumn.childNodes).filter((element) => element.nodeName === "DIV");
 
 		switch (valueSelect) {
@@ -24,20 +24,29 @@ export const filtroProductosSelect = (divColumn) => {
 export const filtroProductosInput = (divColumn) => {
 
 	const inputFiltro = document.getElementById('input-filtro');
-	
-	inputFiltro.addEventListener('keypress', (e) => {
-		if(e.key === "Enter"){
-			e.preventDefault();
-			const arrayNodos = Array.from(divColumn.childNodes).filter((element) => element.nodeName === "DIV");
-			const inputFiltroValue = document.getElementById('input-filtro').value;
-			const productosFiltrados = arrayNodos.filter((producto) => {
-				const arrayLi = Array.from(producto.childNodes[3].childNodes[3].childNodes).filter(li => li.nodeName === 'LI');
-				const arrayMarcas = arrayLi.filter(marca => marca.getAttribute('data-marca') === 'Venzo')
-				console.log(arrayMarcas)
-				console.log(inputFiltroValue)
 
+
+
+	inputFiltro.addEventListener('keypress', (e) => {
+		if (e.key === "Enter") {
+
+			e.preventDefault();
+
+			const inputFiltroValue = document.getElementById('input-filtro').value;
+
+			const arrayNodos = Array.from(divColumn.childNodes).filter((element) => element.nodeName === "DIV");
+
+			arrayNodos.map((producto) => {
+				const arrayLi = Array.from(producto.childNodes[3].childNodes[3].childNodes).filter(li => li.nodeName === 'LI');
+				const arrayMarcas = arrayLi.map(marca => {
+					if (marca.getAttribute('data-marca') === inputFiltroValue) {
+						divColumn.innerHTML = "";
+						const productosFiltrados = marca.parentNode.parentNode.parentNode;
+						divColumn.appendChild(productosFiltrados);
+					}
+				});
+				return arrayMarcas;
 			})
-			console.log(productosFiltrados);
 		}
 	})
 }
@@ -50,7 +59,7 @@ const tipoFiltro = (arrayNodos, tipo) => {
 		if (tipo === "increment") {
 			if (num1 < num2) return 1;
 		}
-		if (tipo === "decrement"){
+		if (tipo === "decrement") {
 			if (num1 > num2) return 1;
 		}
 		return -1;

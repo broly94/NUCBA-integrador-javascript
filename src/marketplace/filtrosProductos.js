@@ -25,9 +25,8 @@ export const filtroProductosInput = (divColumn) => {
 
 	const inputFiltro = document.getElementById('input-filtro');
 
-
-
 	inputFiltro.addEventListener('keypress', (e) => {
+
 		if (e.key === "Enter") {
 
 			e.preventDefault();
@@ -35,17 +34,28 @@ export const filtroProductosInput = (divColumn) => {
 			const inputFiltroValue = document.getElementById('input-filtro').value;
 
 			const arrayNodos = Array.from(divColumn.childNodes).filter((element) => element.nodeName === "DIV");
-
+			
+			
 			arrayNodos.map((producto) => {
+
 				const arrayLi = Array.from(producto.childNodes[3].childNodes[3].childNodes).filter(li => li.nodeName === 'LI');
+				console.log(arrayLi);
 				const arrayMarcas = arrayLi.map(marca => {
 					if (marca.getAttribute('data-marca') === inputFiltroValue) {
-						divColumn.innerHTML = "";
-						const productosFiltrados = marca.parentNode.parentNode.parentNode;
-						divColumn.appendChild(productosFiltrados);
+						if(marca){
+							const productosFiltrados = marca.parentNode.parentNode.parentNode;
+							//console.log(productosFiltrados)
+							divColumn.appendChild(productosFiltrados);
+							//console.log("Hay marca");
+						}else {
+							console.log("no hay marca")
+						}
+						
 					}
 				});
+				//console.log(arrayMarcas)
 				return arrayMarcas;
+			
 			})
 		}
 	})

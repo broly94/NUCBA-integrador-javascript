@@ -101,7 +101,7 @@
         <div class="container-fluid">
             <!--Main-->
             <h2 class="text-center h2 text-uppercase py-5 fw-bolder">Marketplace
-                <i class="fa-solid fa-shop"></i>
+                
             </h2>
             <main class="main justify-content-center">
                 <!--Aside-->
@@ -135,14 +135,16 @@
                                     <option class="" value="1">Menor Precio</option>
                                 </select>
                                 <select class="form-select m-2" name="select-categorias" id="select-categorias" value>
-                                    <option class="">Categorías</option>
-                                    <option class="" value="0">Indumentaria</option>
-                                    <option class="" value="1">Gadgets</option>
+                                    <option class="text-uppercase">-> Categorías <-</option>
+                                    <option class="" value="0">Bicicletas</option>
+                                    <option class="" value="1">Indumentaria</option>
+                                    <option class="" value="2">Gadgets</option>
+                                    <option class="" value="3">Tecnologia</option>
                                 </select>
                             </div>
                         </div>
                         <h4 id="cantidad-resultados" class="bg-dark"></h4>
-                        <div class="alert alert-secondary fw-bold d-none text-center" id="productos-not-found" role="alert"></div>
+                        <div class="alert alert-secondary fw-bold d-none text-center animate__animated animate__fadeIn" id="productos-not-found" role="alert"></div>
                     </div>
                     <section class="section-productos d-flex justify-content-center">
                         <div class="container">

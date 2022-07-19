@@ -14,7 +14,7 @@ const linkIndumentaria = document.getElementById("indumentaria");
 const linkGadget = document.getElementById("gadget");
 const linkTecnologia = document.getElementById("tecnologia");
 
-const arrayLinks = [
+export const arrayLinks = [
 	linkBicicletas,
 	linkIndumentaria,
 	linkGadget,

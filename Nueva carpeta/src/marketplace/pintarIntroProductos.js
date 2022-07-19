@@ -28,7 +28,7 @@ const pintarBicicletas = (estado, divColumn, cantidad) => {
 		numberTecnologia,
 	);
 
-	divColumn.innerHTML += `<h5 class="text-dark w-100 text-center p-4 text-uppercase h5 fs-3 fw-bolder">Mas Vendidos</h5>`
+	divColumn.innerHTML += `<h5 class="text-dark w-100 text-center p-4 text-uppercase h5 fs-3">Mas Vendidos</h5>`
 
 	productos.forEach((prod) => {
 		const { nombre, color, imagen, composicion, precio } =

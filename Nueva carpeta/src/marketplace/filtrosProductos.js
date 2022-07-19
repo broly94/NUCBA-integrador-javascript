@@ -1,4 +1,3 @@
-import { cantidadResultados } from './cantidadResultados.js';
 export const filtroProductosSelect = (divColumn) => {
 
 	const selectFiltro = document.getElementById("select-filtro");
@@ -35,39 +34,29 @@ export const filtroProductosInput = (divColumn) => {
 			const inputFiltroValue = document.getElementById('input-filtro').value;
 
 			const arrayNodos = Array.from(divColumn.childNodes).filter((element) => element.nodeName === "DIV");
+			
+			
+			arrayNodos.map((producto) => {
 
-			const arrayAllLi = arrayNodos.map(producto => Array.from(producto.childNodes[3].childNodes[3].childNodes).filter(li => li.nodeName === 'LI'));
-
-			const alertProductosNotFound = document.getElementById('productos-not-found');
-
-			const arrayLi = arrayAllLi.map( li => li.filter(elements => {
-				const marcaLi = JSON.stringify(elements.getAttribute('data-marca')).replace(/['"]+/g, '').toLocaleLowerCase();
-				const input = inputFiltroValue.toLocaleLowerCase();
-				if(marcaLi === input) return elements;
-			}));
-
-			const cantidadLi = arrayLi.filter(element => element.length > 0);
-
-			if (cantidadLi.length > 0) {
-				divColumn.innerHTML = "";
-				cantidadLi.map(element => {
-					divColumn.appendChild(element[0].parentNode.parentNode.parentNode);
-					cantidadResultados(divColumn);
-				})
-			}else {
-				if(inputFiltroValue === '') {
-					alertProductosNotFound.classList.remove('d-none');
-					alertProductosNotFound.classList.add('d-block');
-					alertProductosNotFound.innerHTML = `Debe completar el campo para buscar`;
-				}else {
-					alertProductosNotFound.classList.remove('d-none');
-					alertProductosNotFound.classList.add('d-block');
-					alertProductosNotFound.innerHTML = `No existe ${inputFiltroValue}`;
-				}
-				setTimeout(() => {
-					alertProductosNotFound.classList.add('d-none');
-				}, 3000)
-			}
+				const arrayLi = Array.from(producto.childNodes[3].childNodes[3].childNodes).filter(li => li.nodeName === 'LI');
+				console.log(arrayLi);
+				const arrayMarcas = arrayLi.map(marca => {
+					if (marca.getAttribute('data-marca') === inputFiltroValue) {
+						if(marca){
+							const productosFiltrados = marca.parentNode.parentNode.parentNode;
+							//console.log(productosFiltrados)
+							divColumn.appendChild(productosFiltrados);
+							//console.log("Hay marca");
+						}else {
+							console.log("no hay marca")
+						}
+						
+					}
+				});
+				//console.log(arrayMarcas)
+				return arrayMarcas;
+			
+			})
 		}
 	})
 }

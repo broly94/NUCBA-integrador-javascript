@@ -49,7 +49,7 @@ const pintarBicicletas = (estado, divColumn, cantidad) => {
 						precio,
 					).toFixed(3)}</p>
 
-                    <a href="#" class="btn btn-outline-secondary">Añadir al carrito</a>
+                    <a href="#" class="btn btn-outline-secondary" id="add-carrito">Añadir al carrito</a>
                 </div>
 
             </div>`;

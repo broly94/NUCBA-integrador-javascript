@@ -6,9 +6,10 @@ import {
 	cardIndumentaria,
 	cardGadget,
 	cardTecnologia,
-} from "./productos.draw.js";
+} from "./productosDraw.js";
 
 import { cantidadResultados } from "./cantidadResultados.js";
+import { indexCarrito } from "../carrito/index.js";
 
 const selectFiltro = document.getElementById("select-filtro");
 
@@ -16,6 +17,8 @@ const linkBicicletas = document.getElementById("bicicletas");
 const linkIndumentaria = document.getElementById("indumentaria");
 const linkGadget = document.getElementById("gadget");
 const linkTecnologia = document.getElementById("tecnologia");
+
+
 
 export const arrayLinks = [
 	linkBicicletas,
@@ -44,6 +47,9 @@ export const navAsideProductos = (navAside, divColumn, estado) => {
 					asideActiveToggle(arrayLinks, e);
 					//Resetea todos los filtros
 					resetearFiltros(selectFiltro);
+					//Agrega al carrito los productos al hacer click en agregar al carrito
+					indexCarrito(divColumn);
+					
 					break;
 
 				case "indumentaria":
@@ -51,6 +57,7 @@ export const navAsideProductos = (navAside, divColumn, estado) => {
 					cardIndumentaria(divColumn, estado);
 					asideActiveToggle(arrayLinks, e);
 					resetearFiltros(selectFiltro);
+					indexCarrito(divColumn);
 					break;
 
 				case "gadget":
@@ -58,6 +65,7 @@ export const navAsideProductos = (navAside, divColumn, estado) => {
 					cardGadget(divColumn, estado);
 					asideActiveToggle(arrayLinks, e);
 					resetearFiltros(selectFiltro);
+					indexCarrito(divColumn);
 					break;
 
 				case "tecnologia":
@@ -65,6 +73,7 @@ export const navAsideProductos = (navAside, divColumn, estado) => {
 					cardTecnologia(divColumn, estado);
 					asideActiveToggle(arrayLinks, e);
 					resetearFiltros(selectFiltro);
+					indexCarrito(divColumn);
 					break;
 			}
 			//Pinta la cantidad de resultados devueltos segun la categoria que elija
@@ -83,25 +92,28 @@ export const navSelectProductos = (divColumn, estado) => {
 				//Pinta los productos segun el link del aside que seleccione
 				cardBicicletas(divColumn, estado);
 				resetearFiltros(selectFiltro);
-
+				indexCarrito(divColumn);
 				break;
 
 			case 'indumentaria':
 				divColumn.innerHTML = "";
 				cardIndumentaria(divColumn, estado);
 				resetearFiltros(selectFiltro);
+				indexCarrito(divColumn);
 				break;
 
 			case 'Gadgets':
 				divColumn.innerHTML = "";
 				cardGadget(divColumn, estado);
 				resetearFiltros(selectFiltro);
+				indexCarrito(divColumn)
 				break;
 
 			case 'tecnologia':
 				divColumn.innerHTML = "";
 				cardTecnologia(divColumn, estado);
 				resetearFiltros(selectFiltro);
+				indexCarrito(divColumn);
 				break;
 		}
 		cantidadResultados(divColumn);

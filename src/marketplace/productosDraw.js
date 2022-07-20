@@ -19,7 +19,7 @@ export const cardBicicletas = (divColumn, { bicicletas }) => {
                             <li>Rodado: ${rodado}</li>
                         </ul>
                         <p class="card-text">$${Number.parseFloat(precio).toFixed(3)}</p>
-                        <a href="#" class="btn btn-outline-secondary">Añadir al carrito</a>
+                        <a href="#" class="btn btn-outline-secondary" id="add-carrito">Añadir al carrito</a>
                     </div>
             </div>
         `;
@@ -47,12 +47,12 @@ export const cardIndumentaria = (divColumn, { indumentaria }) => {
                     <div class="card-body justify-content-center">
                         <h4 class="card-title">${nombre}</h4>
                         <ul>
-                            <li data-marca="${marca}>Marca: ${marca}</li>
+                            <li data-marca="${marca}">Marca: ${marca}</li>
                             <li>Color: ${color}</li>
                             <li>Composicion: ${composicion}</li>
                         </ul>
                         <p class="card-text">$${Number.parseFloat(precio).toFixed(3)}</p>
-                        <a href="#" class="btn btn-outline-secondary">Añadir al carrito</a>
+                        <a href="#" class="btn btn-outline-secondary" id="add-carrito">Añadir al carrito</a>
                     </div>
             </div>
         `;
@@ -80,12 +80,12 @@ export const cardGadget = (divColumn, { gadget }) => {
                     <div class="card-body justify-content-center">
                         <h4 class="card-title">${nombre}</h4>
                         <ul>
-                            <li data-marca="${marca}>Marca: ${marca}</li>
+                            <li data-marca="${marca}">Marca: ${marca}</li>
                             <li>Color: ${color}</li>
                             <li>Composicion: ${composicion}</li>
                         </ul>
                         <p class="card-text">$${Number.parseFloat(precio).toFixed(3)}</p>
-                        <a href="#" class="btn btn-outline-secondary">Añadir al carrito</a>
+                        <a href="#" class="btn btn-outline-secondary" id="add-carrito">Añadir al carrito</a>
                     </div>
             </div>
         `;
@@ -118,7 +118,7 @@ export const cardTecnologia = (divColumn, { tecnologia }) => {
                             <li>Composicion: ${composicion}</li>
                         </ul>
                         <p class="card-text">$${Number.parseFloat(precio).toFixed(3)}</p>
-                        <a href="#" class="btn btn-outline-secondary">Añadir al carrito</a>
+                        <a href="#" class="btn btn-outline-secondary" id="add-carrito">Añadir al carrito</a>
                     </div>
             </div>
         `;

@@ -1,6 +1,7 @@
 import { pintarProductosInicio } from './pintarIntroProductos.js';
 import { navAsideProductos, navSelectProductos } from './navProductos.js';
 import { filtroProductosSelect, filtroProductosInput } from './filtrosProductos.js';
+import { indexCarrito } from "../carrito/index.js";
 
 /** Tags Html Aside */
 export const navAside = document.querySelectorAll('.nav-aside');
@@ -18,10 +19,14 @@ const indexProductos = (estado) => {
     //Filtrar productos mediante input por marca de producto
     filtroProductosInput(divColumn);
     
-    //Pintar productos 
+    //Pintar productos aside
     navAsideProductos(navAside, divColumn, estado);
 
+    //Pintar productos selectProductos mobile
     navSelectProductos(divColumn, estado);
+
+    //Carrito de compras
+    indexCarrito(divColumn);
     
 }
 

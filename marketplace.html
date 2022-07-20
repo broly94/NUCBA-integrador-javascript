@@ -38,7 +38,8 @@
                     <!-- Collapsible wrapper -->
                     <div class="collapse navbar-collapse container" id="navbarSupportedContent">
                         <!-- Navbar brand -->
-                        <a class="navbar-brand mt-2 mt-lg-0 pt-3 px-2 text-center" href="index.html"><i class="fa-solid fa-person-biking text-center"></i></a>
+                        <a class="navbar-brand mt-2 mt-lg-0 pt-3 px-2 text-center" href="index.html"><i
+                                class="fa-solid fa-person-biking text-center"></i></a>
                         <!-- Left links -->
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
@@ -64,10 +65,19 @@
                     <!-- Right elements -->
                     <div class="d-flex align-items-center text-dark">
                         <!-- Icon -->
-                        <a class="text-reset me-3 p-2" href="#">
-                            <i class="fas fa-shopping-cart"></i>
-                        </a>
+                        <div class="position-relative btn-carrito">
+                            <a href="#">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span
+                                    class="position-absolute top-10 start-10 translate-middle badge rounded-pill bg-danger"
+                                    id="carrito-cantidad" value="0">
+                                    0
+                                    <span class="visually-hidden">unread messages</span>
+                                </span>
+                            </a>
+                        </div>
                     </div>
+
                     <!-- Right elements -->
                 </div>
                 <!-- Container wrapper -->
@@ -97,15 +107,15 @@
             <!--Head end-->
         </header>
         <!--Header fin-->
-        
+
         <div class="container-fluid">
             <!--Main-->
             <h2 class="text-center h2 text-uppercase py-5 fw-bolder">Marketplace
-                
+
             </h2>
             <main class="main justify-content-center">
                 <!--Aside-->
-                
+
                 <aside class="aside-categorias justify-content-start pt-5 flex-column sticky-top mt-5">
                     <h2 class="text-center text-uppercase pb-4 fw-bolder">Categorias</h2>
                     <ul class="nav flex-column align-items-center justify-content-center nav-aside" id="nav-aside">
@@ -128,14 +138,15 @@
                     <div class="contenedor-busqueda container">
                         <div class="section-busqueda">
                             <div class="form-group d-flex flex-column flex-md-row justify-content-center p-3 container">
-                                <input class="form-control m-2" type="search" placeholder="Enter para buscar..."  id="input-filtro"/>
+                                <input class="form-control m-2" type="search" placeholder="Buscar por marca..."
+                                    id="input-filtro" />
                                 <select class="form-select m-2" name="select-filtros" id="select-filtro">
-                                    <option class="text-uppercase">-> Filtrar producto <-</option>
+                                    <option class="text-uppercase"> -> Filtrar producto <- </option>
                                     <option class="" value="0">Mayor Precio</option>
                                     <option class="" value="1">Menor Precio</option>
                                 </select>
                                 <select class="form-select m-2" name="select-categorias" id="select-categorias" value>
-                                    <option class="text-uppercase">-> Categorías <-</option>
+                                    <option class="text-uppercase"> -> Categorías <- </option>
                                     <option class="" value="bicicletas">Bicicletas</option>
                                     <option class="" value="indumentaria">Indumentaria</option>
                                     <option class="" value="Gadgets">Gadgets</option>
@@ -144,7 +155,8 @@
                             </div>
                         </div>
                         <p id="cantidad-resultados"></p>
-                        <div class="alert alert-secondary fw-bold d-none text-center animate__animated animate__fadeIn" id="productos-not-found" role="alert"></div>
+                        <div class="alert alert-secondary fw-bold d-none text-center animate__animated animate__fadeIn"
+                            id="productos-not-found" role="alert"></div>
                     </div>
                     <section class="section-productos d-flex justify-content-center">
                         <div class="container">

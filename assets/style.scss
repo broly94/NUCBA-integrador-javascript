@@ -87,13 +87,6 @@ select {
 	opacity: 0.9;
 }
 
-.card-text {
-	font-size: 1.7rem !important;
-	font-weight: bold !important;
-	color: black !important;
-	text-align: center;
-}
-
 /** CONFIGURACION GENERAL END*/
 
 /** HEADER y NAVBAR**/
@@ -106,16 +99,47 @@ select {
 		}
 		nav {
 			#navbarSupportedContent {
-	
 				.navbar-brand {
 					display: block;
 					&:hover {
-						background-color: white!important;
+						background-color: white !important;
 					}
 					i {
 						font-size: 3rem !important;
-						color: #171717;
-	
+						//color: #171717;
+					}
+				}
+				.navbar-nav {
+					li {
+						a {
+							display: inline-block !important;
+							margin: 0;
+							color: #171717!important;
+							&:hover {
+								background-color: white!important;
+							}
+							&::after {
+								display: block;
+								content: "";
+								border-bottom: solid 3px #171717;
+								transform: scaleX(0);
+								transition: transform 250ms ease-in-out;
+							}
+							&:hover::after {
+								
+								transform: scaleX(1)
+							}
+						}
+					}
+				}
+			}
+			.btn-carrito {
+				margin-top: 5px;
+				font-size: 1.5rem !important;
+				a {
+					&:hover {
+						background-color: transparent !important;
+						color: black !important;
 					}
 				}
 			}
@@ -134,16 +158,15 @@ select {
 	}
 
 	.contenedor-busqueda {
-		
-		p{
+		p {
 			text-align: center;
-			font-size:  1rem;
-			font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			font-size: 1rem;
+			font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 			font-weight: 700;
 		}
 
 		#productos-not-found {
-			background-color: #171717!important;
+			background-color: #171717 !important;
 			color: white;
 		}
 	}
@@ -162,17 +185,15 @@ select {
 			-ms-flex-wrap: wrap;
 			flex-wrap: wrap;
 			-ms-flex-pack: distribute;
-			justify-content: space-around;
+			justify-content: center;
 			width: 100%;
-			gap: 20px;
+			gap: 10px;
 			.card {
-				&:hover {
-					border: 1px solid black;
-				}
+				transition: 0.3s;
 				img {
 					margin: 0 auto;
-					width: 400px;
-					height: 350%;
+					width: 300px;
+					height: 250%;
 					max-width: 100%;
 					max-height: 100%;
 				}
@@ -193,13 +214,21 @@ select {
 						font-family: $fuente-dosis;
 					}
 
+					p {
+						font-size: 1.3rem !important;
+						font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+						text-align: center;
+						font-weight: 700;
+					}
+
 					a {
 						display: block;
 						color: black !important;
-						font-size: 1.2rem;
-						font-family: $fuente-dosis;
+						font-size: 1rem;
+						font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 						opacity: 0.8 !important;
 						transition: 0.3s !important;
+						font-weight: 500;
 						&:hover {
 							color: white !important;
 							border: 1px solid black !important;
@@ -261,7 +290,9 @@ select {
 			.section-productos {
 				.card {
 					&:hover {
-						border: 1px solid black;
+						-webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+						-moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+						box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
 					}
 					.card-body {
 						h4 {

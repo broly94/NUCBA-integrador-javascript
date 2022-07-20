@@ -38,7 +38,7 @@
                     <!-- Collapsible wrapper -->
                     <div class="collapse navbar-collapse container" id="navbarSupportedContent">
                         <!-- Navbar brand -->
-                        <a class="navbar-brand mt-2 mt-lg-0 pt-3 px-2 text-center" href="index.html"><i class="fa-solid fa-person-biking"></i></a>
+                        <a class="navbar-brand mt-2 mt-lg-0 pt-3 px-2 text-center" href="index.html"><i class="fa-solid fa-person-biking text-center"></i></a>
                         <!-- Left links -->
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
@@ -128,7 +128,7 @@
                     <div class="contenedor-busqueda container">
                         <div class="section-busqueda">
                             <div class="form-group d-flex flex-column flex-md-row justify-content-center p-3 container">
-                                <input class="form-control m-2" type="text" placeholder="Enter para buscar..."  id="input-filtro"/>
+                                <input class="form-control m-2" type="search" placeholder="Enter para buscar..."  id="input-filtro"/>
                                 <select class="form-select m-2" name="select-filtros" id="select-filtro">
                                     <option class="text-uppercase">-> Filtrar producto <-</option>
                                     <option class="" value="0">Mayor Precio</option>
@@ -136,14 +136,14 @@
                                 </select>
                                 <select class="form-select m-2" name="select-categorias" id="select-categorias" value>
                                     <option class="text-uppercase">-> Categorías <-</option>
-                                    <option class="" value="0">Bicicletas</option>
-                                    <option class="" value="1">Indumentaria</option>
-                                    <option class="" value="2">Gadgets</option>
-                                    <option class="" value="3">Tecnologia</option>
+                                    <option class="" value="bicicletas">Bicicletas</option>
+                                    <option class="" value="indumentaria">Indumentaria</option>
+                                    <option class="" value="Gadgets">Gadgets</option>
+                                    <option class="" value="tecnologia">Tecnologia</option>
                                 </select>
                             </div>
                         </div>
-                        <h4 id="cantidad-resultados" class="bg-dark"></h4>
+                        <p id="cantidad-resultados"></p>
                         <div class="alert alert-secondary fw-bold d-none text-center animate__animated animate__fadeIn" id="productos-not-found" role="alert"></div>
                     </div>
                     <section class="section-productos d-flex justify-content-center">

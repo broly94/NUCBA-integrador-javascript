@@ -1,3 +1,6 @@
+/*
+	NAVEGACION DE LA SECCION DE PRODUCTOS E IMPRESION
+*/
 import {
 	cardBicicletas,
 	cardIndumentaria,
@@ -21,8 +24,8 @@ export const arrayLinks = [
 	linkTecnologia,
 ];
 
-export const handleProductos = (navAside, divColumn, estado) => {
-	
+export const navAsideProductos = (navAside, divColumn, estado) => {
+
 	for (const hijos of navAside) {
 
 		//console.log(hijos); //Descomentar para usar
@@ -64,15 +67,49 @@ export const handleProductos = (navAside, divColumn, estado) => {
 					resetearFiltros(selectFiltro);
 					break;
 			}
-			
 			//Pinta la cantidad de resultados devueltos segun la categoria que elija
 			cantidadResultados(divColumn);
 		});
 	}
 };
 
+export const navSelectProductos = (divColumn, estado) => {
+	const selectProductos = document.getElementById("select-categorias");
+	selectProductos.addEventListener('change', (e) => {
+		switch (e.target.value) {
+			case 'bicicletas':
+				//Resetea el div donde se pintan los productos
+				divColumn.innerHTML = "";
+				//Pinta los productos segun el link del aside que seleccione
+				cardBicicletas(divColumn, estado);
+				resetearFiltros(selectFiltro);
+
+				break;
+
+			case 'indumentaria':
+				divColumn.innerHTML = "";
+				cardIndumentaria(divColumn, estado);
+				resetearFiltros(selectFiltro);
+				break;
+
+			case 'Gadgets':
+				divColumn.innerHTML = "";
+				cardGadget(divColumn, estado);
+				resetearFiltros(selectFiltro);
+				break;
+
+			case 'tecnologia':
+				divColumn.innerHTML = "";
+				cardTecnologia(divColumn, estado);
+				resetearFiltros(selectFiltro);
+				break;
+		}
+		cantidadResultados(divColumn);
+	})
+}
+
 const asideActiveToggle = (arrayLinks, event) => {
-	
+
 	const arrayClassMenuAside = Array.from(document.getElementById(event.target.id).classList);
 
 	if (!arrayClassMenuAside.includes("disabled")) {
@@ -88,9 +125,10 @@ const asideActiveToggle = (arrayLinks, event) => {
 		}
 	}
 
-	
+
 }
 
-const resetearFiltros = (selectFiltro) => {
+export const resetearFiltros = (selectFiltro, selectProductos) => {
 	selectFiltro.selectedIndex = 0;
+	selectProductos = ( typeof selectProductos !== "undefined") ? selectProductos.selectedIndex = 0 : 1;
 }

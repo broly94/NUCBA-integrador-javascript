@@ -1,9 +1,11 @@
 import { cantidadResultados } from './cantidadResultados.js';
-import { arrayLinks } from './handleProductos.js';
+import { arrayLinks, resetearFiltros } from './navProductos.js';
+
+const inputFiltro = document.getElementById('input-filtro');
+	
+const selectFiltro = document.getElementById("select-filtro");
 
 export const filtroProductosSelect = (divColumn) => {
-
-	const selectFiltro = document.getElementById("select-filtro");
 
 	selectFiltro.addEventListener("change", (e) => {
 
@@ -26,8 +28,6 @@ export const filtroProductosSelect = (divColumn) => {
 
 export const filtroProductosInput = (divColumn) => {
 
-	const inputFiltro = document.getElementById('input-filtro');
-
 	inputFiltro.addEventListener('keypress', (e) => {
 
 		if (e.key === "Enter") {
@@ -35,6 +35,8 @@ export const filtroProductosInput = (divColumn) => {
 			e.preventDefault();
 
 			const inputFiltroValue = document.getElementById('input-filtro').value;
+
+			const selectProductos = document.getElementById("select-categorias");
 
 			const arrayNodos = Array.from(divColumn.childNodes).filter((element) => element.nodeName === "DIV");
 
@@ -67,7 +69,8 @@ export const filtroProductosInput = (divColumn) => {
 				//Recorre los productos encontrados 
 				cantidadLi.map(element => {
 					divColumn.appendChild(element[0].parentNode.parentNode.parentNode);
-					cantidadResultados(divColumn);
+					cantidadResultados(divColumn, inputFiltroValue);
+					resetearFiltros(selectFiltro, selectProductos);
 				})
 
 			//Si no existe la marca que manda el input
@@ -79,7 +82,7 @@ export const filtroProductosInput = (divColumn) => {
 					alertProductosNotFound.innerHTML = `Debe completar el campo para buscar`;
 					setTimeout(() => {
 						alertProductosNotFound.classList.remove('animate__fadeIn');
-						alertProductosNotFound.classList.add('animate__fadeOutDown');
+						alertProductosNotFound.classList.add('animate__fadeOut');
 					}, 3000)
 				//Si el input llega lleno pero no existe la marca
 				}else {
@@ -88,12 +91,12 @@ export const filtroProductosInput = (divColumn) => {
 					alertProductosNotFound.innerHTML = `No existe ${inputFiltroValue}`;
 					setTimeout(() => {
 						alertProductosNotFound.classList.remove('animate__fadeIn');
-						alertProductosNotFound.classList.add('animate__fadeOutDown');
+						alertProductosNotFound.classList.add('animate__fadeOut');
 					}, 3000)
 				}
 				setTimeout(() => {
 					alertProductosNotFound.classList.add('animate__fadeIn');
-					alertProductosNotFound.classList.remove('animate__fadeOutDown');
+					alertProductosNotFound.classList.remove('animate__fadeOut');
 					alertProductosNotFound.classList.add('d-none');
 				}, 4000)
 			}

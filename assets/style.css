@@ -94,10 +94,13 @@ select {
 .contenedor-principal .header img {
   max-width: 100%;
 }
-.contenedor-principal .header nav .navbar-brand:hover {
+.contenedor-principal .header nav #navbarSupportedContent .navbar-brand {
+  display: block;
+}
+.contenedor-principal .header nav #navbarSupportedContent .navbar-brand:hover {
   background-color: white !important;
 }
-.contenedor-principal .header nav .navbar-brand i {
+.contenedor-principal .header nav #navbarSupportedContent .navbar-brand i {
   font-size: 3rem !important;
   color: #171717;
 }
@@ -109,6 +112,16 @@ select {
 }
 .main .aside-categorias {
   display: none;
+}
+.main .contenedor-busqueda p {
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+}
+.main .contenedor-busqueda #productos-not-found {
+  background-color: #171717 !important;
+  color: white;
 }
 .main .section-productos {
   padding-bottom: 50px;

@@ -1,4 +1,4 @@
-export const cantidadResultados = (divColumn) => {
+export const cantidadResultados = (divColumn, marca = '') => {
     
 	const resultados = [];
 
@@ -14,6 +14,5 @@ export const cantidadResultados = (divColumn) => {
 		"cantidad-resultados",
 	);
 	targetCantidadResultados.innerHTML = '';
-    targetCantidadResultados.innerHTML += `${resultados.length} Resultados`
-    targetCantidadResultados.className = 'text-center m-3 p-3 fs-4 text-uppercase fw-bolder'
+    targetCantidadResultados.innerHTML += `${resultados.length} resultados encontrados ${marca}`
 };

@@ -1,5 +1,5 @@
 import { pintarProductosInicio } from './pintarIntroProductos.js';
-import { handleProductos } from './handleProductos.js';
+import { navAsideProductos, navSelectProductos } from './navProductos.js';
 import { filtroProductosSelect, filtroProductosInput } from './filtrosProductos.js';
 
 /** Tags Html Aside */
@@ -19,7 +19,9 @@ const indexProductos = (estado) => {
     filtroProductosInput(divColumn);
     
     //Pintar productos 
-    handleProductos(navAside, divColumn, estado);
+    navAsideProductos(navAside, divColumn, estado);
+
+    navSelectProductos(divColumn, estado);
     
 }
 

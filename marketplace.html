@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-type" content="application/json" />
+    <link rel="shortcut icon" href="./assets/images/favicon.png" />
     <!--Estilos custom-->
     <link rel="stylesheet" href="./assets/style.css" />
     <!--Normalize CSS-->
@@ -38,10 +39,11 @@
                     <!-- Collapsible wrapper -->
                     <div class="collapse navbar-collapse container" id="navbarSupportedContent">
                         <!-- Navbar brand -->
-                        <a class="navbar-brand mt-2 mt-lg-0 pt-3 px-2 text-center" href="index.html"><i
-                                class="fa-solid fa-person-biking text-center"></i></a>
+                        <a class="navbar-brand mt-2 mt-lg-0 pt-3 px-2 d-flex justify-content-center href="index.html">
+                            <img src="./assets/images/logo-navbar.png" alt="" srcset="">
+                        </a>
                         <!-- Left links -->
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <ul class="navbar-nav d-flex align-items-center me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
                                 <a class="nav-link text-uppercase text-center" href="index.html">Inicio</a>
                             </li>
@@ -63,7 +65,7 @@
                     <!-- Collapsible wrapper -->
 
                     <!-- Right elements -->
-                    <div class="d-flex align-items-center text-dark">
+                    <div class="d-flex align-items-center text-dark p-2">
                         <!-- Icon -->
                         <div class="position-relative btn-carrito">
                             <a href="#">
@@ -85,39 +87,30 @@
             <!--Navbar End-->
 
             <!--Head-->
-            <div class="contanedor-header container pt-5">
-                <div class="row d-flex justify-content-center align-items-center">
-                    <div class="col-12 col-md-6 animate__animated animate__backInLeft">
-                        <h1 class="display-1 h1 text-center text-head animate__backInLeft">Bike Commerce</h1>
-                        <p class="text-center">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatum impedit
-                            obcaecati, quam
-                            nam aliquam fugit beatae
-                            similique adipisci corrupti corporis nostrum consectetur, blanditiis quis. Ut illum mollitia
-                            libero
-                            iste?
-                        </p>
+            <div class="contanedor-header container-fluid m-0 p-0">
+                <div class="row">
+                    <div class="header-content">
+                        <h3>Bike Store</h3>
+                        <p>Las mejores marcas al mejor precio</p>
                     </div>
-                    <div class="col-12 col-md-6 animate__animated animate__backInRight">
-                        <img src="./assets/images/header-logo.svg" alt="logo e-commerce bike" width="auto"
-                            height="auto" />
+                    <div class="header-logo">
+                        <img src="./assets/images/header-logo-marketplace.svg" alt="logo e-commerce bike" />
                     </div>
                 </div>
+                
             </div>
             <!--Head end-->
         </header>
         <!--Header fin-->
 
-        <div class="container-fluid">
+        <div class="container-fluid contenedor-main">
             <!--Main-->
-            <h2 class="text-center h2 text-uppercase py-5 fw-bolder">Marketplace
-
-            </h2>
+            <h2 class="text-center text-uppercase py-5 fw-bolder marketplace-h2">Marketplace</h2>
+            
             <main class="main justify-content-center">
                 <!--Aside-->
-
                 <aside class="aside-categorias justify-content-start pt-5 flex-column sticky-top mt-5">
-                    <h2 class="text-center text-uppercase pb-4 fw-bolder">Categorias</h2>
+                    <h2 class="text-center text-uppercase fw-bolder">Categorias</h2>
                     <ul class="nav flex-column align-items-center justify-content-center nav-aside" id="nav-aside">
                         <li class="nav-item" id="li-bicicletas">
                             <a class="nav-link" href="#" id="bicicletas">Bicicletas</a>
@@ -136,7 +129,7 @@
                 <!--Aside End-->
                 <div class="contenedor-card-busqueda">
                     <div class="contenedor-busqueda container">
-                        <div class="section-busqueda">
+                        <section class="section-busqueda">
                             <div class="form-group d-flex flex-column flex-md-row justify-content-center p-3 container">
                                 <input class="form-control m-2" type="search" placeholder="Buscar por marca..."
                                     id="input-filtro" />
@@ -153,10 +146,11 @@
                                     <option class="" value="tecnologia">Tecnologia</option>
                                 </select>
                             </div>
-                        </div>
+                        </section>
                         <p id="cantidad-resultados"></p>
                         <div class="alert alert-secondary fw-bold d-none text-center animate__animated animate__fadeIn"
-                            id="productos-not-found" role="alert"></div>
+                            id="productos-not-found" role="alert">
+                        </div>
                     </div>
                     <section class="section-productos d-flex justify-content-center">
                         <div class="container">

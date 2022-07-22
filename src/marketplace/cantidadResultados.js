@@ -13,6 +13,9 @@ export const cantidadResultados = (divColumn, marca = '') => {
 	const targetCantidadResultados = document.getElementById(
 		"cantidad-resultados",
 	);
+
 	targetCantidadResultados.innerHTML = '';
-    targetCantidadResultados.innerHTML += `${resultados.length} resultados encontrados ${marca}`
+    targetCantidadResultados.innerHTML += `${resultados.length} resultados encontrados ${marca}`;
+
+    return resultados;
 };

@@ -22,13 +22,16 @@ const pintarBicicletas = (estado, divColumn, cantidad) => {
 	);
 
 	const productos = allArray.concat(
-        numberIndumentaria,
+		numberIndumentaria,
 		numberGadget,
 		numberBicicletas,
 		numberTecnologia,
 	);
 
-	divColumn.innerHTML += `<h5 class="text-dark w-100 text-center p-4 text-uppercase h5 fs-3 fw-bolder">Mas Vendidos</h5>`
+
+	divColumn.innerHTML += `<h5 class="text-dark w-100 text-center p-4  h5 fs-5 ">Productos seleccionados</h5>`
+
+
 
 	productos.forEach((prod) => {
 		const { nombre, color, imagen, composicion, precio } =
@@ -46,8 +49,8 @@ const pintarBicicletas = (estado, divColumn, cantidad) => {
                         <li>Composicion: ${composicion}</li>
                     </ul>
                     <p class="card-text text-center fs-1 p-3">$${Number.parseFloat(
-						precio,
-					).toFixed(3)}</p>
+			precio,
+		).toFixed(3)}</p>
 
                     <a href="#" class="btn btn-outline-secondary" id="add-carrito">Añadir al carrito</a>
                 </div>

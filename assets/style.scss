@@ -8,19 +8,19 @@
 
 /**VARIABLES */
 /**COLORES */
-$color-uno: #171717;
-$color-dos: #ea5455;
-$color-tres: #f07b3f;
-$color-cuatro: #ffd460;
+$color-uno: #fff0e5;
+$color-dos: #3a10e5;
+$color-tres: #10162f;
+$color-cuatro: #ffd300;
 
 /**FUENTES */
 /**Roboto Mono*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap");
-$fuente-roboto-mono: "Roboto Mono", monospace;
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+$fuente-Libre-titulo: "Libre Baskerville", serif;
 
 /**Dosis */
-@import url("https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300&display=swap");
-$fuente-dosis: "Kantumruy Pro", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap");
+$fuente-propt: "Prompt", sans-serif;
 
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap");
 $fuente-kanit: "Kanit", sans-serif;
@@ -38,13 +38,13 @@ html {
 	box-sizing: inherit;
 }
 body {
-	background-color: white;
+	background-color: $color-uno !important;
 	margin: 0 auto;
 }
 
 a,
 p {
-	font-family: $fuente-kanit;
+	font-family: $fuente-propt;
 	text-decoration: none;
 }
 
@@ -53,15 +53,14 @@ h2,
 h3,
 h4,
 h5 {
-	font-family: $fuente-dosis;
+	font-family: $fuente-Libre-titulo;
 	font-size: 2.5rem !important;
-	font-weight: bolder;
 }
 
 input,
 select {
 	font-size: 1.2rem !important;
-	font-family: $fuente-dosis !important;
+	font-family: $fuente-propt !important;
 }
 
 .text-head {
@@ -70,8 +69,8 @@ select {
 }
 
 .background-aside {
-	background-color: black;
-	color: $color-tres!important;
+	background-color: $color-dos;
+	color: $color-uno !important;
 	border-radius: 5px;
 	opacity: 0.9;
 }
@@ -92,12 +91,12 @@ select {
 .contenedor-principal {
 	.header {
 		nav {
-			background-color: white !important;
+			background-color: $color-uno !important;
 
 			#navbarSupportedContent {
 				.navbar-brand {
 					&:hover {
-						background-color: white !important;
+						background-color: $color-uno !important;
 					}
 					i {
 						font-size: 3rem !important;
@@ -108,8 +107,8 @@ select {
 					li {
 						a {
 							display: inline-block !important;
-							color: #171717 !important;
-							font-size: 1.2rem;
+							color: $color-tres !important;
+							font-size: 1rem;
 							&:hover {
 								background-color: transparent !important;
 							}
@@ -131,7 +130,7 @@ select {
 				margin-top: 5px;
 				font-size: 1.2rem;
 				a {
-					color: $color-uno;
+					color: $color-tres;
 				}
 			}
 		}
@@ -140,8 +139,8 @@ select {
 			.row {
 				display: grid;
 				grid-template-areas:
-					"header-content"
-					"header-logo";
+					"header-logo"
+					"header-content";
 				grid-template-columns: 1fr;
 				grid-template-rows: 1;
 				width: 100%;
@@ -152,7 +151,7 @@ select {
 					justify-content: center;
 					align-items: center;
 					flex-direction: column;
-					background-color: $color-uno;
+					background-color: $color-dos !important;
 					grid-area: header-content;
 					width: 100%;
 					max-width: 100%;
@@ -162,14 +161,17 @@ select {
 					margin: 0;
 					h3 {
 						text-align: center;
-						color: white;
+						color: $color-uno !important;
 						font-size: 3.5rem !important;
+						font-family: $fuente-Libre-titulo;
 					}
 
 					p {
 						text-align: center;
-						color: $color-tres;
+						color: $color-cuatro !important;
 						font-size: 1.5rem;
+						border: 2px solid $color-cuatro;
+						padding: 20px;
 					}
 				}
 
@@ -179,6 +181,7 @@ select {
 					height: 100%;
 					display: flex;
 					justify-content: center;
+					background-color: $color-dos;
 
 					img {
 						width: 500px;
@@ -200,7 +203,7 @@ select {
 			.contanedor-header {
 				.row {
 					display: grid;
-					grid-template-areas: "header-content header-logo";
+					grid-template-areas: "header-logo header-content";
 					grid-template-columns: 1fr 1fr;
 					grid-template-rows: 1;
 					width: 100%;
@@ -260,12 +263,12 @@ select {
 	align-items: center;
 
 	.marketplace-h2 {
-		padding: 10px !important;
+		padding: 20px !important;
 		margin: 50px 0px 50px 0px !important;
 		text-align: center;
 		display: inline-block;
 		align-items: center;
-		border-bottom: 2px solid $color-tres;
+		border: 2px solid $color-tres;
 	}
 
 	.main {
@@ -278,7 +281,6 @@ select {
 		}
 
 		.contenedor-busqueda {
-			
 			width: 80% !important;
 			.section-busqueda {
 				input {
@@ -322,27 +324,26 @@ select {
 				-ms-flex-pack: distribute;
 				justify-content: center;
 				width: 100%;
-				gap: 5px;
+				gap: 15px;
 				.card {
 					transition: 0.3s;
+					border: 1px solid $color-tres;
+					border-radius: 0px!important;
 					img {
 						margin: 0 auto;
 						width: 300px;
 						height: 100%;
 						max-width: 100%;
 						max-height: 100%;
-	
 					}
 					.card-body {
 						h4 {
 							text-align: center;
-							color: $color-tres;
-							background-color: black;
-							font-weight: bold;
+							color: $color-uno;
+							background-color: $color-dos;
 							padding: 5px;
-							font-size: 1.5rem!important;
-							text-transform: uppercase;
-							font-family: $fuente-kanit;
+							font-size: 1.5rem !important;
+							font-family: $fuente-Libre-titulo;
 						}
 
 						ul {
@@ -350,12 +351,12 @@ select {
 							list-style: none;
 							line-height: 30px;
 							font-size: 1.1rem;
-							font-family: Verdana, Geneva, Tahoma, sans-serif;
+							font-family: $fuente-propt;
 							text-align: center;
 						}
 
 						p {
-							font-size: 1.1rem!important;
+							font-size: 1.1rem !important;
 							font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 							text-align: center;
 							font-weight: 700;
@@ -363,17 +364,17 @@ select {
 
 						a {
 							display: block;
-							color: $color-uno;
+							color: $color-dos;
 							font-size: 1rem;
-							font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+							font-family: $fuente-propt;
 							opacity: 0.8 !important;
 							transition: 0.3s !important;
 							font-weight: 700;
 							border-radius: 0px;
 							&:hover {
-								color: $color-tres!important;
-								border: 1px solid black !important;
-								background-color: black !important;
+								color: $color-cuatro !important;
+								border: 1px solid $color-tres !important;
+								background-color: $color-dos !important;
 								opacity: 1 !important;
 							}
 						}
@@ -407,25 +408,24 @@ select {
 				li {
 					width: 100%;
 					a {
-						border-radius: 0px!important;
+						border-radius: 0px !important;
 						text-align: center;
-						font-family: $fuente-kanit;
+						font-family: $fuente-propt;
 						padding: 10px;
-						color: $color-uno;
-						text-transform: uppercase;
+						color: $color-tres;
 						&:hover {
-							background-color: $color-uno!important;
-							color: white;
+							background-color: $color-dos !important;
+							color: $color-uno;
 						}
 					}
 				}
 				h2 {
-					font-family: $fuente-kanit!important;
+					font-family: $fuente-Libre-titulo!important;
 					border: 2px solid $color-tres;
-					font-size: 1.9rem!important;
-					margin-bottom: 0px!important;
+					font-size: 1.9rem !important;
+					margin-bottom: 0px !important;
 					padding: 20px;
-					margin-bottom: 10px!important;
+					margin-bottom: 10px !important;
 				}
 			}
 			.contenedor-card-busqueda {
@@ -445,9 +445,9 @@ select {
 				.section-productos {
 					.card {
 						&:hover {
-							-webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
-							-moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
-							box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+							-webkit-box-shadow: -10px 8px 0px 0px rgba(16, 22, 47, 1);
+							-moz-box-shadow: -10px 8px 0px 0px rgba(16, 22, 47, 1);
+							box-shadow: -10px 8px 0px 0px rgba(16, 22, 47, 1);
 						}
 						.card-body {
 							h4 {
@@ -476,29 +476,32 @@ select {
 
 /** FOOTER */
 .footer {
+	border-top: 2px solid $color-tres;
 	background-color: $color-uno;
-	color: white !important;
+	color: $color-tres!important;
 	.menu-redes-sociales {
 		a {
 			font-size: 3rem;
 			margin-top: 20px;
-			color: white !important;
-			opacity: 0.7 !important;
-			transition: 0.4s !important;
+			color: $color-tres!important;
+			transition: 0.2s!important;
+			font-family: $fuente-propt!important;
 			&:hover {
-				background-color: $color-tres;
-				color: white;
-				opacity: 1 !important;
+				background-color: $color-dos;
+				color: $color-cuatro;
+				color: $color-cuatro!important;
 			}
 		}
 	}
 	.menu-footer {
 		a {
-			color: white !important;
-			opacity: 0.8;
-			transition: 0.4s !important;
+			color: $color-tres!important;
+			font-size: 1.2rem;
+			opacity: 0.9;
+			transition: 0.2s!important;
 			&:hover {
-				background-color: $color-tres;
+				background-color: $color-dos;
+				color: $color-cuatro!important;
 				opacity: 1;
 			}
 		}

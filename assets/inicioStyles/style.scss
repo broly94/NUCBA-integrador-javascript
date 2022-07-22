@@ -1,0 +1,417 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+* Leonel
+*/
+
+/**VARIABLES */
+/**COLORES */
+$color-uno: #fff0e5;
+$color-dos: #3a10e5;
+$color-tres: #10162f;
+$color-cuatro: #ffd300;
+
+/**FUENTES */
+/**Roboto Mono*/
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+$fuente-Libre-titulo: "Libre Baskerville", serif;
+
+/**Dosis */
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap");
+$fuente-propt: "Prompt", sans-serif;
+
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap");
+$fuente-kanit: "Kanit", sans-serif;
+/**VARIABLES END*/
+
+/** CONFIGURACION GENERAL */
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+body {
+    background-color: $color-uno !important;
+    margin: 0 auto;
+}
+
+a,
+p {
+    font-family: $fuente-propt;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $fuente-Libre-titulo;
+    font-size: 2.5rem !important;
+}
+
+input,
+select {
+    font-size: 1.2rem !important;
+    font-family: $fuente-propt !important;
+}
+
+.text-head {
+    font-size: 5rem !important;
+    padding: 40px 0px 40px 0px !important;
+}
+
+.background-aside {
+    background-color: $color-dos;
+    color: $color-uno !important;
+    border-radius: 5px;
+    opacity: 0.9;
+}
+
+.form-control:focus {
+    border-color: $color-uno !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px $color-tres !important;
+}
+
+.form-select:focus {
+    border-color: $color-uno !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px $color-tres !important;
+}
+
+/** CONFIGURACION GENERAL END*/
+
+/** HEADER y NAVBAR**/
+.contenedor-principal {
+    .header {
+        width: 100% !important;
+        margin: 0px !important;
+        padding: 0px !important;
+        nav {
+            background-color: $color-uno !important;
+
+            #navbarSupportedContent {
+                .navbar-brand {
+                    &:hover {
+                        background-color: $color-uno !important;
+                    }
+                    i {
+                        font-size: 3rem !important;
+                    }
+                }
+                .navbar-nav {
+                    justify-content: center;
+                    li {
+                        a {
+                            display: inline-block !important;
+                            color: $color-tres !important;
+                            font-size: 1rem;
+                            &:hover {
+                                background-color: transparent !important;
+                            }
+                            &::after {
+                                display: block;
+                                content: "";
+                                border-bottom: solid 3px $color-tres;
+                                transform: scaleX(0);
+                                transition: transform 250ms ease-in-out;
+                            }
+                            &:hover::after {
+                                transform: scaleX(1);
+                            }
+                        }
+                    }
+                }
+            }
+            .btn-carrito {
+                margin-top: 5px;
+                font-size: 1.2rem;
+                a {
+                    color: $color-tres;
+                }
+            }
+        }
+
+        .contanedor-header {
+            .row {
+                display: grid;
+                grid-template-areas:
+                    "header-logo"
+                    "header-content";
+                grid-template-columns: 1fr;
+                grid-template-rows: 1;
+                width: 100%;
+                height: 100%;
+                margin: 0px !important;
+                padding: 0px !important;
+                .header-content {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    background-color: $color-uno !important;
+                    grid-area: header-content;
+                    width: 100%;
+                    max-width: 100%;
+                    max-height: 100%;
+                    transition: 0.3s;
+                    padding: 20px;
+                    margin: 0;
+                    h3 {
+                        text-align: center;
+                        color: $color-tres !important;
+                        font-size: 3.5rem !important;
+                        font-family: $fuente-Libre-titulo;
+                    }
+
+                    p {
+                        text-align: center;
+                        color: $color-dos !important;
+                        font-size: 1.5rem;
+                        border: 2px solid $color-dos;
+                        padding: 20px;
+                        transition: 0.3s;
+                        font-family: $fuente-propt !important;
+                        &:hover {
+                            -webkit-box-shadow: -10px 8px 0px 0px rgba(58, 16, 229, 1);
+                            -moz-box-shadow: -10px 8px 0px 0px rgba(58, 16, 229, 1);
+                            box-shadow: -10px 8px 0px 0px rgba(58, 16, 229, 1);
+                        }
+                    }
+                }
+
+                .header-logo {
+                    grid-area: header-logo;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    background-color: $color-uno;
+
+                    img {
+                        width: 500px;
+                        height: 500px;
+                        margin: 0;
+                        padding: 0;
+                        max-width: 100%;
+                        max-height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 990px) and (min-width: 625px) {
+    .contenedor-principal {
+        .header {
+            .contanedor-header {
+                .row {
+                    display: grid;
+                    grid-template-areas: "header-logo header-content";
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 1;
+                    .header-content {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        background-color: $color-uno;
+                        grid-area: header-content;
+                        width: 100%;
+                        max-width: 100%;
+                        max-height: 100%;
+                        transition: 0.3s;
+
+                        h3 {
+                            color: white;
+                            font-size: 3.5rem !important;
+                        }
+
+                        p {
+                            color: $color-dos;
+                            font-size: 1.5rem;
+                        }
+                    }
+                    .header-logo {
+                        grid-area: header-logo;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+
+                        img {
+                            width: 500px;
+                            height: 500px;
+                            margin: 0;
+                            padding: 0;
+                            max-width: 100%;
+                            max-height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/** HEADER Y NAVBAR END **/
+
+/** CONFIGURACION ESQUELETO MAIN */
+
+.contenedor-main {
+    display: grid;
+    grid-template-areas:
+        "parallax-bg-1"
+        "mas-vendidos";
+    grid-template-columns: 1;
+    grid-template-rows: 1;
+    width: 100% !important;
+    margin: 0px !important;
+    padding: 0px !important;
+
+    .parallax-bg-1 {
+        grid-area: parallax-bg-1;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0px;
+        background-image: url("../images/inicio/bike-parallax-2.jpg");
+        filter: grayscale(100%);
+        background-size: cover;
+        background-attachment: fixed;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .contenedor-parallax {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid $color-uno;
+            padding: 50px 0px 50px 0px !important;
+            margin: 20px;
+
+            h1 {
+                color: $color-uno;
+                font-family: $fuente-Libre-titulo !important;
+                font-size: 1.5rem !important;
+                text-align: center;
+                padding: 20px 0px 20px 0px !important;
+            }
+
+            a {
+                text-decoration: none;
+                font-size: 1rem !important;
+                font-family: $fuente-propt;
+                border: 2px solid $color-uno;
+                color: $color-uno !important;
+                padding: 5px 20px 5px 20px;
+                transition: 0.3s;
+                font-weight: 600;
+                &:hover {
+                    background-color: $color-uno !important;
+                    color: $color-tres !important;
+                }
+            }
+        }
+    }
+
+    .mas-vendidos {
+        width: 100%;
+        background-color: $color-tres;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 100px 0px 20px 0px;
+
+        h2{
+            font-family: $fuente-Libre-titulo;
+            color: $color-uno;
+            font-size: 1.8rem!important;
+            text-align: center;
+            padding: 50px 0px;
+        }
+
+        .contenedor-card {
+            margin-top: 20px;
+            padding: 0px;
+            margin: 0px;
+            width: 100%;
+            .row {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: center;
+                gap: 20px;
+                width: 100%;
+                padding: 20px;
+                margin-bottom: 50px;
+                .card-producto {
+                    display: flex;
+                    height: 100px;
+                    background-color: transparent;
+                    border: 2px solid $color-dos;
+                }
+            }
+        }
+        a {
+            font-family: $fuente-propt;
+            font-weight: 300;
+            font-size: 0.9rem!important;
+            color: $color-cuatro;
+            text-decoration: none;
+        }
+    }
+}
+
+/** MAIN MEDIA QUERIES */
+
+@media (min-width: 990px) and (min-width: 625px) {
+}
+
+/** CONFIGURACION ESQUELETO MAIN END */
+
+/** FOOTER */
+.footer {
+    border-top: 2px solid $color-tres;
+    background-color: $color-uno;
+    color: $color-tres !important;
+    .menu-redes-sociales {
+        a {
+            font-size: 3rem;
+            margin-top: 20px;
+            color: $color-tres !important;
+            transition: 0.2s !important;
+            font-family: $fuente-propt !important;
+            &:hover {
+                background-color: $color-dos;
+                color: $color-cuatro;
+                color: $color-cuatro !important;
+            }
+        }
+    }
+    .menu-footer {
+        a {
+            color: $color-tres !important;
+            font-size: 1.2rem;
+            opacity: 0.9;
+            transition: 0.2s !important;
+            &:hover {
+                background-color: $color-dos;
+                color: $color-cuatro !important;
+                opacity: 1;
+            }
+        }
+    }
+}
+/** FOOTER END */

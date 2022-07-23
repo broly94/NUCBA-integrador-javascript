@@ -288,13 +288,15 @@ select {
   color: #fff0e5;
   font-size: 1.8rem !important;
   text-align: center;
-  padding: 50px 0px;
+  padding: 30px 0px;
 }
 .contenedor-main .mas-vendidos .contenedor-card {
   margin-top: 20px;
   padding: 0px;
   margin: 0px;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .contenedor-main .mas-vendidos .contenedor-card .row {
   display: flex;
@@ -309,18 +311,59 @@ select {
 }
 .contenedor-main .mas-vendidos .contenedor-card .row .card-producto {
   display: flex;
-  height: 100px;
+  height: auto;
+  flex-direction: column;
   background-color: transparent;
-  border: 2px solid #3a10e5;
+  border: 3px solid #ffd300;
+  overflow: hidden;
+  padding: 0px;
+  transition: 0.3s;
+}
+.contenedor-main .mas-vendidos .contenedor-card .row .card-producto:hover {
+  box-shadow: -5px 5px 0px 0px rgb(255, 211, 0);
+}
+.contenedor-main .mas-vendidos .contenedor-card .row .card-producto .contenedor-imagen {
+  width: 100%;
+  margin: 0;
+}
+.contenedor-main .mas-vendidos .contenedor-card .row .card-producto .contenedor-imagen img {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  filter: grayscale(1.5);
+  transition: 0.2s;
+}
+.contenedor-main .mas-vendidos .contenedor-card .row .card-producto .contenedor-imagen img:hover {
+  filter: grayscale(0);
+}
+.contenedor-main .mas-vendidos .contenedor-card .row .card-producto .contenedor-contenido {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 7px 20px 7px;
+  flex-wrap: wrap;
+}
+.contenedor-main .mas-vendidos .contenedor-card .row .card-producto .contenedor-contenido .info-precio {
+  font-family: "Prompt", sans-serif;
+  color: #fff0e5;
+  text-align: center;
+  align-self: center;
+}
+.contenedor-main .mas-vendidos .contenedor-card .row .card-producto .contenedor-contenido .boton a {
+  color: #fff0e5 !important;
+  padding: 2px 15px 2px 15px;
+  border: 2px solid #fff0e5;
+  transition: 0.3s;
+}
+.contenedor-main .mas-vendidos .contenedor-card .row .card-producto .contenedor-contenido .boton a:hover {
+  box-shadow: -5px 5px 0px 0px rgb(255, 211, 0);
 }
 .contenedor-main .mas-vendidos a {
   font-family: "Prompt", sans-serif;
-  font-weight: 300;
-  font-size: 0.9rem !important;
+  font-weight: 600;
+  font-size: 1rem !important;
   color: #ffd300;
   text-decoration: none;
 }
-
 /** MAIN MEDIA QUERIES */
 /** CONFIGURACION ESQUELETO MAIN END */
 /** FOOTER */

@@ -226,28 +226,85 @@ select {
   display: grid;
   grid-template-areas: "section-carreras" "section-galeria";
   grid-template-columns: 1;
-  gap: 10px;
   width: 100%;
+  padding: 0px !important;
+  margin: 0px !important;
 }
 .contenedor-main .section-carreras {
   grid-area: section-carreras;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 20px;
+  padding: 100px 20px 100px 20px;
 }
 .contenedor-main .section-carreras .row {
   width: 100%;
 }
 .contenedor-main .section-carreras .row h3 {
   font-family: "Libre Baskerville", serif;
-  font-size: 1.9rem !important;
+  font-size: 2.5rem !important;
+}
+.contenedor-main .section-carreras .row .table {
+  margin-top: 50px;
+  border: 2px solid #10162f;
+}
+.contenedor-main .section-carreras .row .table thead tr {
+  background-color: #ffd300;
+  color: #10162f;
+}
+.contenedor-main .section-carreras .row .table thead tr th {
+  text-align: center;
+}
+.contenedor-main .section-carreras .row .table tbody tr {
+  background-color: #10162f;
+  color: #fff0e5;
+}
+.contenedor-main .section-carreras .row .table tbody tr:hover {
+  background-color: #3a10e5 !important;
+  color: #fff0e5;
+  cursor: pointer;
+}
+.contenedor-main .section-carreras .row .table tbody tr td {
+  text-align: center;
 }
 .contenedor-main .section-galeria {
   grid-area: section-galeria;
+  background-color: #10162f;
+  width: 100% !important;
+  padding: 20px;
+  margin: 0px;
+}
+.contenedor-main .section-galeria h3 {
+  font-family: "Prompt", sans-serif;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  color: #fff0e5;
 }
 .contenedor-main .section-galeria .row {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  margin-bottom: 20px;
+}
+.contenedor-main .section-galeria .row a {
+  padding: 20px;
+  transition: 0.3s;
+}
+.contenedor-main .section-galeria .row a img {
+  width: 600px;
+  height: auto;
+  filter: sepia(20);
+  filter: brightness(0.7);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+.contenedor-main .section-galeria .row a img:hover {
+  filter: sepia(0);
+  filter: brightness(1);
+  transform: scale(1.1);
 }
 
 /** MAIN MEDIA QUERIES */

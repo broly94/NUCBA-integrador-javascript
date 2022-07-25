@@ -270,29 +270,97 @@ select {
     grid-template-areas: "section-carreras"
                          "section-galeria";
     grid-template-columns: 1;
-    gap: 10px;
     width: 100%;
+    padding: 0px!important;
+    margin: 0px!important;
     .section-carreras {
         grid-area: section-carreras;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 20px;
-        
+        padding: 100px 20px 100px 20px;
         .row {
             width: 100%;
+            
             h3 {
                 font-family: $fuente-Libre-titulo;
-                font-size: 1.9rem!important;
+                font-size: 2.5rem!important;
+            }
+
+            .table {
+                margin-top: 50px;
+                border: 2px solid $color-tres;
+                thead {
+                    
+                    tr {
+                        background-color: $color-cuatro;
+                        color: $color-tres;
+                        th {
+                            text-align: center;
+                        }
+                    }
+                }
+
+                tbody {
+                    
+                    tr {
+                        background-color: $color-tres;
+                        color: $color-uno;
+                        &:hover {
+                            background-color: $color-dos!important;
+                            color: $color-uno;
+                            cursor: pointer;
+                        }
+                        td {
+                            text-align: center;                            
+                        }
+                    }
+                }
             }
         }
     }
 
     .section-galeria {
         grid-area: section-galeria;
+        background-color: $color-tres;
+        width: 100%!important;
+        padding: 20px;
+        margin: 0px;
+        h3 {
+            font-family: $fuente-propt;
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            color: $color-uno;
+        }
 
         .row {
             width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+            margin-bottom: 20px;
+
+            a{
+                padding: 20px;
+                transition: .3s;
+                img {
+
+                    width: 600px;
+                    height: auto;
+                    filter:sepia(20);
+                    filter: brightness(0.7);
+                    transition: 0.3s;
+                    border-radius: 5px;
+                    &:hover {
+                        filter:sepia(0);
+                        filter: brightness(1);
+                        transform: scale(1.1);
+                    }
+
+                }
+            }
         }
     }
 }

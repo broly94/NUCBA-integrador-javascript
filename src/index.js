@@ -11,6 +11,9 @@ const App = () => {
             case '/index.html':
             initMapa();
             break;
+            case '/':
+            initMapa();
+            break;
             case '/marketplace.html': 
             indexProductos(estado);
             break;

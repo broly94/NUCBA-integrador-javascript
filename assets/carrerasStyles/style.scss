@@ -324,7 +324,7 @@ select {
         grid-area: section-galeria;
         background-color: $color-tres;
         width: 100%!important;
-        padding: 20px;
+        padding: 10px;
         margin: 0px;
         h3 {
             font-family: $fuente-propt;
@@ -339,16 +339,15 @@ select {
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 50px;
+            padding: 10px;
             margin-bottom: 20px;
 
             a{
                 padding: 20px;
                 transition: .3s;
                 img {
-
                     width: 600px;
-                    height: auto;
+                    max-height: 600px;
                     filter:sepia(20);
                     filter: brightness(0.7);
                     transition: 0.3s;

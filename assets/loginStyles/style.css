@@ -75,10 +75,16 @@ select {
 
 /** CONFIGURACION GENERAL END*/
 /** HEADER y NAVBAR**/
+.contenedor-principal {
+  display: grid;
+  grid-template-areas: "header" "contenedor-main" "footer";
+  grid-template-columns: 1;
+  grid-template-rows: 1;
+  /** FOOTER */
+  /** FOOTER END */
+}
 .contenedor-principal .header {
-  width: 100% !important;
-  margin: 0px !important;
-  padding: 0px !important;
+  grid-area: header;
 }
 .contenedor-principal .header nav {
   background-color: #fff0e5 !important;
@@ -117,9 +123,6 @@ select {
 .contenedor-principal .header nav .btn-carrito a {
   color: #10162f;
 }
-.contenedor-principal .header .contanedor-header {
-  background-color: #ffd300 !important;
-}
 .contenedor-principal .header .contanedor-header .row {
   display: grid;
   grid-template-areas: "header-logo" "header-content";
@@ -135,6 +138,7 @@ select {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: #3a10e5 !important;
   grid-area: header-content;
   width: 100%;
   max-width: 100%;
@@ -145,21 +149,20 @@ select {
 }
 .contenedor-principal .header .contanedor-header .row .header-content h3 {
   text-align: center;
-  color: #10162f !important;
+  color: #fff0e5 !important;
   font-size: 3.5rem !important;
   font-family: "Libre Baskerville", serif;
 }
 .contenedor-principal .header .contanedor-header .row .header-content p {
   text-align: center;
-  color: #3a10e5 !important;
+  color: #ffd300 !important;
   font-size: 1.5rem;
-  border: 2px solid #3a10e5;
+  border: 2px solid #ffd300;
   padding: 20px;
   transition: 0.3s;
-  font-family: "Prompt", sans-serif !important;
 }
 .contenedor-principal .header .contanedor-header .row .header-content p:hover {
-  box-shadow: -10px 8px 0px 0px rgb(58, 16, 229);
+  box-shadow: -10px 8px 0px 0px #ffd300;
 }
 .contenedor-principal .header .contanedor-header .row .header-logo {
   grid-area: header-logo;
@@ -167,6 +170,7 @@ select {
   height: 100%;
   display: flex;
   justify-content: center;
+  background-color: #3a10e5;
 }
 .contenedor-principal .header .contanedor-header .row .header-logo img {
   width: 500px;
@@ -176,167 +180,89 @@ select {
   max-width: 100%;
   max-height: 100%;
 }
-
-@media (min-width: 990px) and (min-width: 625px) {
-  .contenedor-principal .header .contanedor-header .row {
-    display: grid;
-    grid-template-areas: "header-logo header-content";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1;
-    width: 100%;
-  }
-  .contenedor-principal .header .contanedor-header .row .header-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    grid-area: header-content;
-    width: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    transition: 0.3s;
-  }
-  .contenedor-principal .header .contanedor-header .row .header-content h3 {
-    color: white;
-    font-size: 3.5rem !important;
-  }
-  .contenedor-principal .header .contanedor-header .row .header-content p {
-    color: #3a10e5;
-    font-size: 1.5rem;
-  }
-  .contenedor-principal .header .contanedor-header .row .header-logo {
-    grid-area: header-logo;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  .contenedor-principal .header .contanedor-header .row .header-logo img {
-    width: 500px;
-    height: 500px;
-    margin: 0;
-    padding: 0;
-    max-width: 100%;
-    max-height: 100%;
-  }
+.contenedor-principal .contenedor-main {
+  grid-area: contenedor-main;
 }
-/** HEADER Y NAVBAR END **/
-/** CONFIGURACION ESQUELETO MAIN */
-.contenedor-main {
-  display: grid;
-  grid-template-areas: "section-carreras" "section-galeria";
-  grid-template-columns: 1;
-  width: 100%;
-  padding: 0px !important;
-  margin: 0px !important;
-}
-.contenedor-main .section-carreras {
-  grid-area: section-carreras;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 100px 20px 100px 20px;
-}
-.contenedor-main .section-carreras .row {
-  width: 100%;
-}
-.contenedor-main .section-carreras .row h3 {
-  font-family: "Libre Baskerville", serif;
-  font-size: 2.5rem !important;
-}
-.contenedor-main .section-carreras .row .table {
-  margin-top: 50px;
-  border: 2px solid #10162f;
-}
-.contenedor-main .section-carreras .row .table thead tr {
-  background-color: #ffd300;
-  color: #10162f;
-}
-.contenedor-main .section-carreras .row .table thead tr th {
-  text-align: center;
-}
-.contenedor-main .section-carreras .row .table tbody tr {
-  background-color: #10162f;
-  color: #fff0e5;
-}
-.contenedor-main .section-carreras .row .table tbody tr:hover {
-  background-color: #3a10e5 !important;
-  color: #fff0e5;
-  cursor: pointer;
-}
-.contenedor-main .section-carreras .row .table tbody tr td {
-  text-align: center;
-}
-.contenedor-main .section-galeria {
-  grid-area: section-galeria;
-  background-color: #10162f;
-  width: 100% !important;
-  padding: 10px;
-  margin: 0px;
-}
-.contenedor-main .section-galeria h3 {
-  font-family: "Prompt", sans-serif;
-  text-align: center;
-  margin-top: 20px;
-  padding-top: 20px;
-  color: #fff0e5;
-}
-.contenedor-main .section-galeria .row {
-  width: 100%;
+.contenedor-principal .contenedor-main .login {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 50px 0px 50px 0px;
+}
+.contenedor-principal .contenedor-main .login .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  transition: 0.2s;
+}
+.contenedor-principal .contenedor-main .login .row form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 0px 10px 0px;
+  border: 2px solid #10162f;
+}
+.contenedor-principal .contenedor-main .login .row form h5 {
+  width: 100%;
   padding: 10px;
-  margin-bottom: 20px;
+  background-color: #10162f;
+  color: #fff0e5;
 }
-.contenedor-main .section-galeria .row a {
-  padding: 20px;
-  transition: 0.3s;
+.contenedor-principal .contenedor-main .login .row form .form-group {
+  padding: 10px;
 }
-.contenedor-main .section-galeria .row a img {
-  width: 600px;
-  max-height: 600px;
-  filter: sepia(20);
-  filter: brightness(0.7);
-  transition: 0.3s;
-  border-radius: 5px;
+.contenedor-principal .contenedor-main .login .row form .form-group input {
+  border-radius: 0px !important;
+  border: 2px solid #10162f;
+  font-size: 1.1rem;
 }
-.contenedor-main .section-galeria .row a img:hover {
-  filter: sepia(0);
-  filter: brightness(1);
-  transform: scale(1.1);
+.contenedor-principal .contenedor-main .login .row form .form-group small {
+  font-size: 0.7rem;
+  color: #10162f;
+  font-weight: 700;
 }
-
-/** MAIN MEDIA QUERIES */
-/** CONFIGURACION ESQUELETO MAIN END */
-/** FOOTER */
-.footer {
+.contenedor-principal .contenedor-main .login .row form button {
+  padding: 5px 20px 5px 20px;
+  margin: 10px;
+  background-color: transparent;
+  border: 2px solid #10162f;
+}
+.contenedor-principal .contenedor-main .login .row:hover {
+  box-shadow: -13px 11px 0px 0px rgb(16, 22, 47);
+}
+.contenedor-principal .footer {
+  grid-area: footer;
   border-top: 2px solid #10162f;
   background-color: #fff0e5;
+  max-height: 300px;
   color: #10162f !important;
 }
-.footer .menu-redes-sociales a {
+.contenedor-principal .footer .menu-redes-sociales a {
   font-size: 3rem;
   margin-top: 20px;
   color: #10162f !important;
   transition: 0.2s !important;
   font-family: "Prompt", sans-serif !important;
 }
-.footer .menu-redes-sociales a:hover {
+.contenedor-principal .footer .menu-redes-sociales a:hover {
   background-color: #3a10e5;
   color: #ffd300;
   color: #ffd300 !important;
 }
-.footer .menu-footer a {
+.contenedor-principal .footer .menu-footer a {
   color: #10162f !important;
   font-size: 1.2rem;
   opacity: 0.9;
   transition: 0.2s !important;
 }
-.footer .menu-footer a:hover {
+.contenedor-principal .footer .menu-footer a:hover {
   background-color: #3a10e5;
   color: #ffd300 !important;
   opacity: 1;
 }
 
-/** FOOTER END *//*# sourceMappingURL=style.css.map */
+/** HEADER Y NAVBAR END **/
+/** CONFIGURACION ESQUELETO MAIN *//*# sourceMappingURL=style.css.map */

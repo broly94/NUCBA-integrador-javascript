@@ -148,6 +148,10 @@ select {
   font-size: 1.5rem;
   border: 2px solid #ffd300;
   padding: 20px;
+  transition: 0.3s;
+}
+.contenedor-principal .header .contanedor-header .row .header-content p:hover {
+  box-shadow: -10px 8px 0px 0px #ffd300;
 }
 .contenedor-principal .header .contanedor-header .row .header-logo {
   grid-area: header-logo;

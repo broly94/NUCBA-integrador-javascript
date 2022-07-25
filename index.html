@@ -17,8 +17,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- FontAwesome-->
     <script src="https://kit.fontawesome.com/07dfb01708.js" crossorigin="anonymous"></script>
+    <!--Leaflet-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+        crossorigin="" />
 
-    <title>Inicio Bike Store</title>
+    <title>Inicio | Bike Store</title>
 </head>
 
 <body>
@@ -39,11 +43,7 @@
 
                     <!-- Collapsible wrapper -->
                     <div class="collapse navbar-collapse container" id="navbarSupportedContent">
-                        <!-- Navbar brand -->
-                        <!--<a class="navbar-brand mt-2 mt-lg-0 pt-3 px-2 d-flex justify-content-center href="index.html">
-                            <img src="./assets/images/logo-navbar.png" alt="" srcset="">
-                        </a>-->
-                        <!-- Left links -->
+
                         <ul class="navbar-nav d-flex align-items-center me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
                                 <a class="nav-link text-center" href="index.html">Inicio</a>
@@ -57,31 +57,10 @@
                             <li class="nav-item">
                                 <a class="nav-link text-center" href="login.html">Iniciar Sesión</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-center" href="registro.html">Registro</a>
-                            </li>
                         </ul>
                         <!-- Left links -->
                     </div>
                     <!-- Collapsible wrapper -->
-
-                    <!-- Right elements -->
-                    <div class="d-flex align-items-center text-dark p-2">
-                        <!-- Icon -->
-                        <div class="position-relative btn-carrito">
-                            <a href="#">
-                                <i class="fas fa-shopping-cart"></i>
-                                <span
-                                    class="position-absolute top-10 start-10 translate-middle badge rounded-pill bg-danger"
-                                    id="carrito-cantidad" value="0">
-                                    0
-                                    <span class="visually-hidden">unread messages</span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Right elements -->
                 </div>
                 <!-- Container wrapper -->
             </nav>
@@ -98,28 +77,28 @@
                         <img src="./assets/images/header-logo-marketplace.svg" alt="logo e-commerce bike" />
                     </div>
                 </div>
-                
+
             </div>
             <!--Head end-->
         </header>
         <!--Header fin-->
 
-		<!--Main-->
+        <!--Main-->
         <main class="container-fluid contenedor-main">
 
-			<section class="parallax-bg-1">
-				<div class="container contenedor-parallax">
-					<h1>Encontra todos nustros productos en nuestro Marketplace</h1>
-					<a href="marketplace.html">Visitar</a>
-				</div>
-			</section>
+            <section class="parallax-bg-1">
+                <div class="container contenedor-parallax">
+                    <h1>Encontra todos nustros productos en nuestro Marketplace</h1>
+                    <a href="marketplace.html">Visitar</a>
+                </div>
+            </section>
 
-			<section class="mas-vendidos">
-				<h2>Productos más vendidos</h2>
-				<div class="contenedor-card">
-					<div class="row">
-						<div class="col-12 col-sm-4 col-lg-2 card-producto">
-							<div class="contenedor-imagen">
+            <section class="productos-ocacion">
+                <h2>Productos para todo tipo de ocación</h2>
+                <div class="contenedor-card">
+                    <div class="row">
+                        <div class="col-12 col-sm-4 col-lg-2 card-producto">
+                            <div class="contenedor-imagen">
                                 <img src="./assets/images/inicio/producto-1.jpg" alt="" srcset="">
                             </div>
                             <div class="contenedor-contenido">
@@ -128,9 +107,9 @@
                                     <a href="#">ver</a>
                                 </div>
                             </div>
-						</div>
-						<div class="col-12 col-sm-4 col-lg-2 card-producto">
-							<div class="contenedor-imagen">
+                        </div>
+                        <div class="col-12 col-sm-4 col-lg-2 card-producto">
+                            <div class="contenedor-imagen">
                                 <img src="./assets/images/inicio/producto-2.jpg" alt="" srcset="">
                             </div>
                             <div class="contenedor-contenido">
@@ -139,9 +118,9 @@
                                     <a href="#">ver</a>
                                 </div>
                             </div>
-						</div>
-						<div class="col-12 col-sm-4 col-lg-2 card-producto">
-							<div class="contenedor-imagen">
+                        </div>
+                        <div class="col-12 col-sm-4 col-lg-2 card-producto">
+                            <div class="contenedor-imagen">
                                 <img src="./assets/images/inicio/producto-3.jpg" alt="" srcset="">
                             </div>
                             <div class="contenedor-contenido">
@@ -150,9 +129,9 @@
                                     <a href="#">ver</a>
                                 </div>
                             </div>
-						</div>
-						<div class="col-12 col-sm-4 col-lg-2 card-producto">
-							<div class="contenedor-imagen">
+                        </div>
+                        <div class="col-12 col-sm-4 col-lg-2 card-producto">
+                            <div class="contenedor-imagen">
                                 <img src="./assets/images/inicio/producto-4.jpg" alt="" srcset="">
                             </div>
                             <div class="contenedor-contenido">
@@ -161,16 +140,49 @@
                                     <a href="#">ver</a>
                                 </div>
                             </div>
-						</div>
-					</div>
-				</div>
-				<div>
-					<a href="markteplace.html">Ver todos los productos</a>
-				</div>
-			</section>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a class="btn-all-productos" href="markteplace.html">Ver todos los productos</a>
+                </div>
+            </section>
 
-		</main>
-		<!--Main Fin-->
+            <section class="delivery">
+                <div class="row">
+                    <div class="col-12 col-md-6 delivery-imagen">
+                        <img src="./assets/images/inicio/delivery.svg" alt="delivery">
+                    </div>
+                    <div class="col-12 col-md-6 delivery-contenido">
+                        <h3>Envios a todo el país</h3>
+                        <p>Encontrá lo que buscas. <span>Nosotros te lo enviamos sin costo</span></p>
+                        <p>Con nuestro sistema de puerta a puerta podrás ver por donde estan tus productos en tiempo
+                            real</p>
+
+                    </div>
+                </div>
+            </section>
+
+            <div class="mapa">
+                <h3>Contacto</h3>
+                <div class="row">
+                    <div class="col-12 col-md-6 contenedor-mapa">
+                        <div id="map"></div>
+                    </div>
+                    <div class="col-12 col-md-6 contenedor-info-empresa">
+                        <h3>Bike Strore</h3>
+                        <ul>
+                            <li>Buenos Aires</li>
+                            <li>Florencio Varela</li>
+                            <li>Av Perón 3587</li>
+                            <li>1154745856</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <!--Main Fin-->
 
         <!--Footer-->
         <footer class="footer container-fluid">
@@ -222,6 +234,10 @@
     <script type="module" src="./src/index.js"></script>
     <!-- Bootstrap 5 CDN JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Leaflet-->
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
 </body>
 
 </html>

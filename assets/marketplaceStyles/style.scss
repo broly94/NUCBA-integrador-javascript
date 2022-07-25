@@ -173,6 +173,12 @@ select {
 						font-size: 1.5rem;
 						border: 2px solid $color-cuatro;
 						padding: 20px;
+						transition: .3s;
+						&:hover {
+                            -webkit-box-shadow: -10px 8px 0px 0px $color-cuatro;
+                            -moz-box-shadow: -10px 8px 0px 0px $color-cuatro;
+                            box-shadow: -10px 8px 0px 0px $color-cuatro;
+                        }
 					}
 				}
 

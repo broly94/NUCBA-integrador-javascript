@@ -117,6 +117,9 @@ select {
 .contenedor-principal .header nav .btn-carrito a {
   color: #10162f;
 }
+.contenedor-principal .header .contanedor-header {
+  background-color: #ffd300 !important;
+}
 .contenedor-principal .header .contanedor-header .row {
   display: grid;
   grid-template-areas: "header-logo" "header-content";
@@ -132,7 +135,6 @@ select {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #fff0e5 !important;
   grid-area: header-content;
   width: 100%;
   max-width: 100%;
@@ -165,7 +167,6 @@ select {
   height: 100%;
   display: flex;
   justify-content: center;
-  background-color: #fff0e5;
 }
 .contenedor-principal .header .contanedor-header .row .header-logo img {
   width: 500px;
@@ -182,13 +183,13 @@ select {
     grid-template-areas: "header-logo header-content";
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1;
+    width: 100%;
   }
   .contenedor-principal .header .contanedor-header .row .header-content {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #fff0e5;
     grid-area: header-content;
     width: 100%;
     max-width: 100%;
@@ -223,253 +224,33 @@ select {
 /** CONFIGURACION ESQUELETO MAIN */
 .contenedor-main {
   display: grid;
-  grid-template-areas: "parallax-bg-1" "mas-vendidos";
+  grid-template-areas: "section-carreras" "section-galeria";
   grid-template-columns: 1;
-  grid-template-rows: 1;
-  width: 100% !important;
-  margin: 0px !important;
-  padding: 0px !important;
-}
-.contenedor-main .parallax-bg-1 {
-  grid-area: parallax-bg-1;
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 0px;
-  background-image: url("../images/inicio/bike-parallax-2.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  filter: grayscale(100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.contenedor-main .parallax-bg-1 .contenedor-parallax {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 5px solid #fff0e5;
-  padding: 50px 0px 50px 0px !important;
-  margin: 20px;
-}
-.contenedor-main .parallax-bg-1 .contenedor-parallax h1 {
-  color: #fff0e5;
-  font-family: "Libre Baskerville", serif !important;
-  font-size: 1.5rem !important;
-  text-align: center;
-  padding: 20px 0px 20px 0px !important;
-}
-.contenedor-main .parallax-bg-1 .contenedor-parallax a {
-  text-decoration: none;
-  font-size: 1rem !important;
-  font-family: "Prompt", sans-serif;
-  border: 2px solid #fff0e5;
-  color: #fff0e5 !important;
-  padding: 5px 20px 5px 20px;
-  transition: 0.3s;
-  font-weight: 600;
-}
-.contenedor-main .parallax-bg-1 .contenedor-parallax a:hover {
-  background-color: #fff0e5 !important;
-  color: #10162f !important;
-}
-.contenedor-main .productos-ocacion {
+  gap: 10px;
   width: 100%;
-  background-color: #10162f;
+}
+.contenedor-main .section-carreras {
+  grid-area: section-carreras;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 100px 0px 20px 0px;
+  padding: 20px;
 }
-.contenedor-main .productos-ocacion h2 {
+.contenedor-main .section-carreras .row {
+  width: 100%;
+}
+.contenedor-main .section-carreras .row h3 {
   font-family: "Libre Baskerville", serif;
-  color: #fff0e5;
-  font-size: 1.8rem !important;
-  text-align: center;
-  padding: 30px 0px;
+  font-size: 1.9rem !important;
 }
-.contenedor-main .productos-ocacion .contenedor-card {
-  margin-top: 20px;
-  padding: 0px;
-  margin: 0px;
+.contenedor-main .section-galeria {
+  grid-area: section-galeria;
+}
+.contenedor-main .section-galeria .row {
   width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.contenedor-main .productos-ocacion .contenedor-card .row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  gap: 20px;
-  width: 100%;
-  padding: 20px;
-  margin-bottom: 50px;
-}
-.contenedor-main .productos-ocacion .contenedor-card .row .card-producto {
-  display: flex;
-  height: auto;
-  flex-direction: column;
-  background-color: transparent;
-  border: 3px solid #ffd300;
-  overflow: hidden;
-  padding: 0px;
-}
-.contenedor-main .productos-ocacion .contenedor-card .row .card-producto .contenedor-imagen {
-  width: 100%;
-  margin: 0;
-}
-.contenedor-main .productos-ocacion .contenedor-card .row .card-producto .contenedor-imagen img {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-.contenedor-main .productos-ocacion .contenedor-card .row .card-producto .contenedor-contenido {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 7px 20px 7px;
-  flex-wrap: wrap;
-}
-.contenedor-main .productos-ocacion .contenedor-card .row .card-producto .contenedor-contenido .info-precio {
-  font-family: "Prompt", sans-serif;
-  color: #fff0e5;
-  text-align: center;
-}
-.contenedor-main .productos-ocacion .contenedor-card .row .card-producto .contenedor-contenido .boton a {
-  color: #fff0e5 !important;
-  padding: 2px 15px 2px 15px;
-  border: 2px solid #fff0e5;
-  text-decoration: none;
-  transition: 0.3s;
-}
-.contenedor-main .productos-ocacion .contenedor-card .row .card-producto .contenedor-contenido .boton a:hover {
-  box-shadow: -5px 5px 0px 0px rgb(255, 211, 0);
-}
-.contenedor-main .productos-ocacion .btn-all-productos {
-  font-family: "Prompt", sans-serif;
-  font-weight: 600;
-  font-size: 1rem !important;
-  color: #ffd300;
-  text-decoration: none;
-  padding: 15px;
-  transition: 0.3s;
-}
-.contenedor-main .productos-ocacion .btn-all-productos:hover {
-  background-color: rgba(255, 255, 255, 0.103) !important;
-}
-
-.delivery {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  background-color: #3a10e5;
-}
-.delivery .row {
-  width: 100%;
-  padding: 50px;
-}
-.delivery .row .delivery-imagen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.delivery .row .delivery-imagen img {
-  width: 100% !important;
-}
-.delivery .row .delivery-contenido {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 20px;
-}
-.delivery .row .delivery-contenido h3 {
-  text-align: center;
-  font-family: "Libre Baskerville", serif;
-  font-weight: 600;
-  color: #fff0e5;
-}
-.delivery .row .delivery-contenido p {
-  font-family: "Prompt", sans-serif;
-  font-size: 1.3rem !important;
-  text-align: center;
-  color: #fff0e5;
-}
-.delivery .row .delivery-contenido span {
-  color: #ffd300;
-}
-
-.mapa {
-  width: 100%;
-}
-.mapa h3 {
-  text-align: center;
-  margin-top: 20px;
-  padding-top: 20px;
-  font-family: "Libre Baskerville", serif;
-}
-.mapa .row {
-  display: flex;
-  justify-content: center;
-  padding: 50px;
-  width: 100%;
-}
-.mapa .row .contenedor-mapa {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  flex-direction: column;
-  padding: 20px;
-}
-.mapa .row .contenedor-mapa #map {
-  height: 300px;
-  width: 100%;
-}
-.mapa .row .contenedor-info-empresa {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 20px;
-}
-.mapa .row .contenedor-info-empresa h3 {
-  font-family: "Libre Baskerville", serif;
-  padding: 20px;
-}
-.mapa .row .contenedor-info-empresa ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.mapa .row .contenedor-info-empresa ul li {
-  font-family: "Prompt", sans-serif !important;
 }
 
 /** MAIN MEDIA QUERIES */
-@media (min-width: 1024px) {
-  .productos-ocacion .contenedor-card .row .card-producto {
-    transition: 0.3s;
-  }
-  .productos-ocacion .contenedor-card .row .card-producto:hover {
-    box-shadow: -5px 5px 0px 0px rgb(255, 211, 0);
-  }
-  .productos-ocacion .contenedor-card .row .card-producto .contenedor-imagen img {
-    filter: grayscale(1.5);
-    transition: 0.2s;
-  }
-  .productos-ocacion .contenedor-card .row .card-producto .contenedor-imagen img:hover {
-    filter: grayscale(0);
-  }
-  .delivery .row:hover {
-    background-color: rgba(255, 255, 255, 0.0901960784) !important;
-  }
-}
 /** CONFIGURACION ESQUELETO MAIN END */
 /** FOOTER */
 .footer {

@@ -139,6 +139,7 @@ select {
         }
 
         .contanedor-header {
+            background-color: $color-cuatro!important;
             .row {
                 display: grid;
                 grid-template-areas:
@@ -155,7 +156,6 @@ select {
                     justify-content: center;
                     align-items: center;
                     flex-direction: column;
-                    background-color: $color-uno !important;
                     grid-area: header-content;
                     width: 100%;
                     max-width: 100%;
@@ -192,7 +192,6 @@ select {
                     height: 100%;
                     display: flex;
                     justify-content: center;
-                    background-color: $color-uno;
 
                     img {
                         width: 500px;
@@ -217,12 +216,13 @@ select {
                     grid-template-areas: "header-logo header-content";
                     grid-template-columns: 1fr 1fr;
                     grid-template-rows: 1;
+                    width: 100%;
                     .header-content {
                         display: flex;
                         justify-content: center;
                         align-items: center;
                         flex-direction: column;
-                        background-color: $color-uno;
+                        //background-color: $color-uno;
                         grid-area: header-content;
                         width: 100%;
                         max-width: 100%;
@@ -267,254 +267,32 @@ select {
 
 .contenedor-main {
     display: grid;
-    grid-template-areas:
-        "parallax-bg-1"
-        "mas-vendidos";
+    grid-template-areas: "section-carreras"
+                         "section-galeria";
     grid-template-columns: 1;
-    grid-template-rows: 1;
-    width: 100% !important;
-    margin: 0px !important;
-    padding: 0px !important;
-
-    .parallax-bg-1 {
-        grid-area: parallax-bg-1;
-        width: 100% !important;
-        margin: 0 !important;
-        padding: 0px;
-        background-image: url("../images/inicio/bike-parallax-2.jpg");
-        background-size: cover;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 100vh;
-        filter: grayscale(100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .contenedor-parallax {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border: 5px solid $color-uno;
-            padding: 50px 0px 50px 0px !important;
-            margin: 20px;
-
-            h1 {
-                color: $color-uno;
-                font-family: $fuente-Libre-titulo !important;
-                font-size: 1.5rem !important;
-                text-align: center;
-                padding: 20px 0px 20px 0px !important;
-            }
-
-            a {
-                text-decoration: none;
-                font-size: 1rem !important;
-                font-family: $fuente-propt;
-                border: 2px solid $color-uno;
-                color: $color-uno !important;
-                padding: 5px 20px 5px 20px;
-                transition: 0.3s;
-                font-weight: 600;
-                &:hover {
-                    background-color: $color-uno !important;
-                    color: $color-tres !important;
-                }
-            }
-        }
-    }
-
-    .productos-ocacion {
-        width: 100%;
-        background-color: $color-tres;
+    gap: 10px;
+    width: 100%;
+    .section-carreras {
+        grid-area: section-carreras;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        padding: 100px 0px 20px 0px;
-
-        h2 {
-            font-family: $fuente-Libre-titulo;
-            color: $color-uno;
-            font-size: 1.8rem !important;
-            text-align: center;
-            padding: 30px 0px;
-        }
-
-        .contenedor-card {
-            margin-top: 20px;
-            padding: 0px;
-            margin: 0px;
+        padding: 20px;
+        
+        .row {
             width: 100%;
-            display: flex;
-            justify-content: center;
-            .row {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: space-around;
-                align-items: center;
-                gap: 20px;
-                width: 100%;
-                padding: 20px;
-                margin-bottom: 50px;
-                .card-producto {
-                    display: flex;
-                    height: auto;
-                    flex-direction: column;
-                    background-color: transparent;
-                    border: 3px solid $color-cuatro;
-                    overflow: hidden;
-                    padding: 0px;
-
-                    .contenedor-imagen {
-                        width: 100%;
-                        margin: 0;
-                        img {
-                            width: 100%;
-                            margin: 0;
-                            padding: 0;
-                        }
-                    }
-                    .contenedor-contenido {
-                        display: flex;
-                        justify-content: space-between;
-                        padding: 20px 7px 20px 7px;
-                        flex-wrap: wrap;
-
-                        .info-precio {
-                            font-family: $fuente-propt;
-                            color: $color-uno;
-                            text-align: center;
-                        }
-
-                        .boton {
-                            a {
-                                color: $color-uno !important;
-                                padding: 2px 15px 2px 15px;
-                                border: 2px solid $color-uno;
-                                text-decoration: none;
-                                transition: 0.3s;
-                                &:hover {
-                                    -webkit-box-shadow: -5px 5px 0px 0px rgba(255, 211, 0, 1);
-                                    -moz-box-shadow: -5px 5px 0px 0px rgba(255, 211, 0, 1);
-                                    box-shadow: -5px 5px 0px 0px rgba(255, 211, 0, 1);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        .btn-all-productos {
-            font-family: $fuente-propt;
-            font-weight: 600;
-            font-size: 1rem !important;
-            color: $color-cuatro;
-            text-decoration: none;
-            padding: 15px;
-            transition: 0.3s;
-            &:hover {
-                background-color: rgba(255, 255, 255, 0.103) !important;
-            }
-        }
-    }
-}
-
-.delivery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: $color-dos;
-    .row {
-        width: 100%;
-        padding: 50px;
-        .delivery-imagen {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            img {
-                width: 100% !important;
-            }
-        }
-
-        .delivery-contenido {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 20px;
-
-            h3 {
-                text-align: center;
-                font-family: $fuente-Libre-titulo;
-                font-weight: 600;
-                color: #fff0e5;
-            }
-
-            p {
-                font-family: $fuente-propt;
-                font-size: 1.3rem !important;
-                text-align: center;
-                color: $color-uno;
-            }
-
-            span {
-                color: $color-cuatro;
-            }
-        }
-    }
-}
-
-.mapa {
-    width: 100%;
-
-    h3 {
-        text-align: center;
-        margin-top: 20px;
-        padding-top: 20px;
-        font-family: $fuente-Libre-titulo;
-    }
-    .row {
-        display: flex;
-        justify-content: center;
-        padding: 50px;
-        width: 100%;
-        .contenedor-mapa {
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            flex-direction: column;
-            padding: 20px;
-            #map {
-                height: 300px;
-                width: 100%;
-            }
-        }
-
-        .contenedor-info-empresa {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 20px;
-
             h3 {
                 font-family: $fuente-Libre-titulo;
-                padding: 20px;
+                font-size: 1.9rem!important;
             }
+        }
+    }
 
-            ul {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                li {
-                    font-family: $fuente-propt !important;
-                }
-            }
+    .section-galeria {
+        grid-area: section-galeria;
+
+        .row {
+            width: 100%;
         }
     }
 }
@@ -522,37 +300,7 @@ select {
 /** MAIN MEDIA QUERIES */
 
 @media (min-width: 1024px) {
-    .productos-ocacion {
-        .contenedor-card {
-            .row {
-                .card-producto {
-                    transition: 0.3s;
-                    &:hover {
-                        -webkit-box-shadow: -5px 5px 0px 0px rgba(255, 211, 0, 1);
-                        -moz-box-shadow: -5px 5px 0px 0px rgba(255, 211, 0, 1);
-                        box-shadow: -5px 5px 0px 0px rgba(255, 211, 0, 1);
-                    }
-                    .contenedor-imagen {
-                        img {
-                            filter: grayscale(1.5);
-                            transition: 0.2s;
-                            &:hover {
-                                filter: grayscale(0);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
 
-    .delivery {
-        .row {
-            &:hover {
-                background-color: #ffffff17 !important;
-            }
-        }
-    }
 }
 
 /** CONFIGURACION ESQUELETO MAIN END */
